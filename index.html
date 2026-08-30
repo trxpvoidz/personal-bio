@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +20,11 @@
     <meta name="theme-color" content="#000000">
 
     <style>
+
         /* =========================================================
            Y2K MONOCHROME WEB STYLE
            MS GOTHIC / BLACK + WHITE / PIXEL CURSOR
-           ========================================================= */
+        ========================================================== */
 
         @font-face {
             font-family: "MSGothic";
@@ -47,32 +49,26 @@
         body {
             min-height: 100vh;
             padding: 20px;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 14px;
             line-height: 1.5;
-
             color: #000;
             background-color: #fff;
-
             background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/Untitled440_20260829025922.png?raw=true");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-
             overflow-x: hidden;
 
             -webkit-font-smoothing: none;
             -moz-osx-font-smoothing: grayscale;
             font-smooth: never;
             text-rendering: optimizeSpeed;
-        }
 
-        /*
-         * Custom cursor is installed by JavaScript below.
-         * This prevents normal cursor rules from fighting with it.
-         */
+            /* YOUR NEW CUSTOM CURSOR */
+            cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, auto;
+        }
 
         a,
         button,
@@ -83,7 +79,7 @@
         [role="button"],
         [onclick],
         [data-tooltip] {
-            cursor: pointer;
+            cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, pointer;
         }
 
         a {
@@ -108,46 +104,29 @@
             background: #000;
         }
 
-        /* =========================================================
-           CONTAINER
-           ========================================================= */
-
         .container {
             width: min(900px, 100%);
             margin: 30px auto;
             padding: 20px;
-
             background: rgba(255, 255, 255, 0.96);
-
             border: 2px solid #000;
             box-shadow: 6px 6px 0 #000;
-
             position: relative;
             image-rendering: pixelated;
         }
 
-        /* =========================================================
-           HEADER
-           ========================================================= */
-
         .header {
             margin-bottom: 25px;
             padding: 12px 15px;
-
             color: #fff;
             background: #000;
-
             border: 2px solid #000;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 20px;
             font-weight: normal;
             letter-spacing: 1px;
             text-transform: uppercase;
-
-            box-shadow:
-                4px 4px 0 #fff,
-                6px 6px 0 #000;
+            box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
         }
 
         h1,
@@ -182,17 +161,11 @@
             color: #000;
         }
 
-        /* =========================================================
-           BOXES
-           ========================================================= */
-
         .box {
             margin: 18px 0;
             padding: 12px;
-
             color: #000;
             background: #fff;
-
             border: 2px solid #000;
             box-shadow: 3px 3px 0 #000;
         }
@@ -200,30 +173,21 @@
         .black-box {
             margin: 18px 0;
             padding: 15px;
-
             color: #fff;
             background: #000;
-
             border: 2px solid #000;
-
-            box-shadow:
-                4px 4px 0 #fff,
-                6px 6px 0 #000;
+            box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
         }
 
         .y2k-strip {
             margin: 15px 0;
             padding: 5px 8px;
-
             color: #fff;
             background: #000;
-
             border-top: 2px solid #000;
             border-bottom: 2px solid #000;
-
             white-space: nowrap;
             overflow: hidden;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 12px;
         }
@@ -231,16 +195,13 @@
         .retro-line {
             height: 5px;
             margin: 10px 0;
-
-            background:
-                repeating-linear-gradient(
-                    90deg,
-                    #000 0,
-                    #000 8px,
-                    #fff 8px,
-                    #fff 12px
-                );
-
+            background: repeating-linear-gradient(
+                90deg,
+                #000 0,
+                #000 8px,
+                #fff 8px,
+                #fff 12px
+            );
             border-top: 1px solid #000;
             border-bottom: 1px solid #000;
         }
@@ -252,27 +213,17 @@
             border-top: 2px solid #000;
         }
 
-        /* =========================================================
-           BUTTONS
-           ========================================================= */
-
         button,
         .button {
             display: inline-block;
-
             padding: 6px 14px;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 13px;
-
             color: #000;
             background: #fff;
-
             border: 2px solid #000;
             box-shadow: 3px 3px 0 #000;
-
             cursor: pointer;
-
             transition:
                 background 0.05s,
                 color 0.05s,
@@ -292,22 +243,15 @@
             box-shadow: 0 0 0 #000;
         }
 
-        /* =========================================================
-           INPUTS
-           ========================================================= */
-
         input,
         textarea,
         select {
             width: 100%;
             padding: 7px;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 13px;
-
             color: #000;
             background: #fff;
-
             border: 2px solid #000;
             outline: none;
         }
@@ -320,14 +264,9 @@
             box-shadow: 3px 3px 0 #777;
         }
 
-        /* =========================================================
-           TABLE
-           ========================================================= */
-
         table {
             width: 100%;
             border-collapse: collapse;
-
             font-family: "MSGothic", "MS Gothic", monospace;
         }
 
@@ -353,14 +292,9 @@
             background: #000;
         }
 
-        /* =========================================================
-           IMAGES
-           ========================================================= */
-
         img {
             max-width: 100%;
             height: auto;
-
             border: 2px solid #000;
             image-rendering: pixelated;
         }
@@ -371,59 +305,35 @@
             box-shadow: 4px 4px 0 #000;
         }
 
-        /* =========================================================
-           BADGE
-           ========================================================= */
-
         .badge {
             display: inline-block;
-
             padding: 2px 7px;
-
             color: #fff;
             background: #000;
-
             border: 1px solid #000;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 11px;
         }
-
-        /* =========================================================
-           STATUS
-           ========================================================= */
 
         .status {
             display: flex;
-
             justify-content: space-between;
             align-items: center;
-
             gap: 10px;
-
             margin-top: 20px;
             padding: 6px 10px;
-
             color: #fff;
             background: #000;
-
             border: 2px solid #000;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 11px;
         }
-
-        /* =========================================================
-           CODE
-           ========================================================= */
 
         code,
         pre {
             font-family: "MSGothic", "MS Gothic", monospace;
-
             color: #fff;
             background: #000;
-
             border: 1px solid #000;
         }
 
@@ -436,39 +346,30 @@
             overflow-x: auto;
         }
 
-        /* =========================================================
-           WHITE Y2K BOX
-           ========================================================= */
-
         .y2k-white {
             margin: 18px 0;
             padding: 12px;
-
             color: #000;
             background: #fff;
-
             border: 2px solid #000;
-
             font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 14px;
             font-weight: normal;
             line-height: 1.5;
-
             box-shadow: 3px 3px 0 #000;
         }
 
+
         /* =========================================================
            TOOLTIP
-           ========================================================= */
+        ========================================================== */
 
         #s-m-t-tooltip,
         .y2k-tooltip {
             position: absolute;
             z-index: 2147483646;
-
             width: max-content;
             max-width: 280px;
-
             padding: 8px 10px;
 
             color: #fff;
@@ -481,7 +382,6 @@
             font-size: 12px;
             font-weight: normal;
             line-height: 1.4;
-
             letter-spacing: 0.2px;
             text-align: left;
 
@@ -490,11 +390,9 @@
                 6px 6px 0 #000;
 
             pointer-events: none;
-
             white-space: normal;
             overflow-wrap: break-word;
             word-break: normal;
-
             opacity: 1;
         }
 
@@ -503,17 +401,12 @@
             content: "INFO";
 
             display: block;
-
             margin: -8px -10px 7px -10px;
             padding: 3px 7px 3px 24px;
 
             color: #000;
             background-color: #fff;
-
-            background-image: url(
-                "https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true"
-            );
-
+            background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true");
             background-repeat: no-repeat;
             background-position: left center;
             background-size: 16px 16px;
@@ -524,7 +417,6 @@
             font-size: 10px;
             font-weight: normal;
             line-height: 1.2;
-
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -559,23 +451,23 @@
 
             margin: 7px -10px -8px -10px;
 
-            background:
-                repeating-linear-gradient(
-                    90deg,
-                    #fff 0,
-                    #fff 5px,
-                    #000 5px,
-                    #000 8px
-                );
+            background: repeating-linear-gradient(
+                90deg,
+                #fff 0,
+                #fff 5px,
+                #000 5px,
+                #000 8px
+            );
         }
 
         #s-m-t-tooltip {
             cursor: default !important;
         }
 
+
         /* =========================================================
            CRT SCANLINES
-           ========================================================= */
+        ========================================================== */
 
         body::after {
             content: "";
@@ -587,19 +479,19 @@
 
             pointer-events: none;
 
-            background:
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(0, 0, 0, 0.025) 0px,
-                    rgba(0, 0, 0, 0.025) 1px,
-                    transparent 1px,
-                    transparent 3px
-                );
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.025) 0px,
+                rgba(0, 0, 0, 0.025) 1px,
+                transparent 1px,
+                transparent 3px
+            );
         }
+
 
         /* =========================================================
            FOOTER
-           ========================================================= */
+        ========================================================== */
 
         footer {
             width: min(900px, 100%);
@@ -617,10 +509,6 @@
             font-size: 11px;
         }
 
-        /* =========================================================
-           SCROLLBAR
-           ========================================================= */
-
         ::-webkit-scrollbar {
             width: 14px;
         }
@@ -632,24 +520,21 @@
 
         ::-webkit-scrollbar-thumb {
             background: #000;
-
             border: 2px solid #fff;
-
-            box-shadow:
-                inset 0 0 0 1px #000;
+            box-shadow: inset 0 0 0 1px #000;
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: #333;
         }
 
+
         /* =========================================================
            PROFILE
-           ========================================================= */
+        ========================================================== */
 
         .profile {
             display: flex;
-
             gap: 18px;
 
             margin: 20px 0;
@@ -709,17 +594,16 @@
             border: 1px solid #000;
         }
 
+
         /* =========================================================
            SOCIAL LINKS
-           ========================================================= */
+        ========================================================== */
 
         .social-links {
             display: flex;
-
             flex-wrap: wrap;
 
             gap: 8px;
-
             margin-top: 10px;
         }
 
@@ -736,9 +620,10 @@
             background: #000;
         }
 
+
         /* =========================================================
            TERMINAL
-           ========================================================= */
+        ========================================================== */
 
         .terminal {
             margin: 18px 0;
@@ -760,15 +645,15 @@
             overflow-x: auto;
         }
 
+
         /* =========================================================
            GALLERY
-           ========================================================= */
+        ========================================================== */
 
         .gallery {
             display: grid;
 
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
 
             gap: 10px;
 
@@ -790,16 +675,16 @@
             filter: contrast(1.2);
         }
 
+
         /* =========================================================
            KEYCHAINS
            
            IMPORTANT:
-           The position + base rotation live on the wrapper.
-           Only the charm itself swings.
-
-           This prevents the old problem where the animation
-           overwrote the wrapper's positioning/rotation.
-           ========================================================= */
+           The wrapper owns the base rotation.
+           The image receives the swinging animation.
+           This prevents the animation from destroying
+           the keychain's original corner position/rotation.
+        ========================================================== */
 
         .keychain-wrapper {
             position: absolute;
@@ -807,17 +692,11 @@
             width: 64px;
             height: 64px;
 
-            z-index: 50;
+            z-index: 5;
 
             pointer-events: auto;
 
             display: block;
-
-            /*
-             * Makes the entire 64x64 area hoverable,
-             * not just the non-transparent pixels.
-             */
-            touch-action: auto;
         }
 
         .keychain-top-left {
@@ -877,95 +756,82 @@
 
             image-rendering: pixelated;
 
-            /*
-             * Pivot near the top of the charm.
-             * This makes it visually swing from where
-             * the keychain would be hanging.
-             */
-            transform-origin: 50% 8%;
-
-            /*
-             * IMPORTANT:
-             * The image itself receives the animation.
-             * The wrapper keeps its original transform.
-             */
-            will-change: transform;
-
-            pointer-events: auto;
-
             display: block;
+
+            transform-origin: center center;
         }
 
-        /*
-         * Do NOT use the old crazy translate + rotate shake.
-         *
-         * The new animation is a gentle pendulum:
-         *
-         *       \  |  /
-         *        \ | /
-         *         \|/
-         *
-         * It swings around the top attachment point.
-         */
-
-        .keychain-wrapper.is-hovered .corner-object {
-            animation:
-                keychain-swing
-                0.72s
-                ease-in-out
-                infinite;
-        }
 
         /*
-         * Also keep CSS :hover as a fallback.
-         * JS below adds .is-hovered as the reliable trigger.
+         * KEYCHAIN SWING
+         *
+         * The whole keychain keeps its original position
+         * and base rotation because the animation is applied
+         * ONLY to the image.
+         *
+         * This gives it more of a dangling/swinging motion
+         * instead of randomly vibrating around.
          */
+
         .keychain-wrapper:hover .corner-object {
-            animation:
-                keychain-swing
-                0.72s
-                ease-in-out
-                infinite;
+            animation: keychain-swing 0.65s ease-in-out infinite;
         }
 
         @keyframes keychain-swing {
+
             0% {
-                transform: rotate(0deg);
+                transform:
+                    translate(0px, 0px)
+                    rotate(0deg);
             }
 
-            20% {
-                transform: rotate(-3deg);
+            15% {
+                transform:
+                    translate(1px, -1px)
+                    rotate(4deg);
             }
 
-            50% {
-                transform: rotate(3deg);
+            30% {
+                transform:
+                    translate(2px, 0px)
+                    rotate(7deg);
             }
 
-            80% {
-                transform: rotate(-2deg);
+            45% {
+                transform:
+                    translate(1px, 1px)
+                    rotate(3deg);
+            }
+
+            60% {
+                transform:
+                    translate(-1px, 1px)
+                    rotate(-4deg);
+            }
+
+            75% {
+                transform:
+                    translate(-2px, 0px)
+                    rotate(-7deg);
+            }
+
+            90% {
+                transform:
+                    translate(-1px, -1px)
+                    rotate(-3deg);
             }
 
             100% {
-                transform: rotate(0deg);
+                transform:
+                    translate(0px, 0px)
+                    rotate(0deg);
             }
         }
 
-        /*
-         * Prevent animation from looking like it jumps
-         * when the cursor leaves.
-         */
-        .keychain-wrapper .corner-object {
-            transition: transform 0.18s ease-out;
-        }
-
-        .keychain-wrapper.is-hovered .corner-object,
-        .keychain-wrapper:hover .corner-object {
-            transition: none;
-        }
 
         /* =========================================================
            ASCII ART
-           ========================================================= */
+        ========================================================== */
 
         .ascii-art {
             margin: 12px 0;
@@ -988,13 +854,13 @@
             text-shadow: 1px 0 #fff;
         }
 
+
         /* =========================================================
            MUSIC PLAYER
-           ========================================================= */
+        ========================================================== */
 
         .now-playing {
             display: flex;
-
             align-items: center;
 
             gap: 15px;
@@ -1081,7 +947,6 @@
 
         .music-progress-container {
             display: flex;
-
             align-items: center;
 
             gap: 7px;
@@ -1119,14 +984,13 @@
             width: 0%;
             height: 100%;
 
-            background:
-                repeating-linear-gradient(
-                    90deg,
-                    #fff 0,
-                    #fff 8px,
-                    #000 8px,
-                    #000 11px
-                );
+            background: repeating-linear-gradient(
+                90deg,
+                #fff 0,
+                #fff 8px,
+                #000 8px,
+                #000 11px
+            );
 
             border-right: 2px solid #fff;
 
@@ -1137,9 +1001,10 @@
             box-shadow: 2px 2px 0 #fff;
         }
 
+
         /* =========================================================
            STAMPS
-           ========================================================= */
+        ========================================================== */
 
         .stamps {
             display: flex;
@@ -1162,19 +1027,22 @@
             display: block;
         }
 
+
         /* =========================================================
            MOBILE
-           ========================================================= */
+        ========================================================== */
 
         @media (max-width: 600px) {
 
             body {
                 padding: 10px;
+
                 font-size: 13px;
             }
 
             .container {
                 margin: 10px auto;
+
                 padding: 12px;
 
                 box-shadow: 4px 4px 0 #000;
@@ -1194,6 +1062,7 @@
 
             .status {
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
@@ -1278,6 +1147,7 @@
                 width: 100%;
             }
         }
+
     </style>
 </head>
 
@@ -1285,13 +1155,18 @@
 
     <div class="container">
 
+
         <!-- =====================================================
              KEYCHAINS
-             ===================================================== -->
+             
+             ALL SIX NOW HAVE data-tooltip ON THE WRAPPER.
+             This means the whole keychain area triggers the
+             tooltip instead of only the image.
+        ====================================================== -->
 
         <span
             class="keychain-wrapper keychain-top-left"
-            data-keychain="1"
+            data-tooltip="little keychain charm"
         >
             <img
                 class="corner-object"
@@ -1300,9 +1175,10 @@
             >
         </span>
 
+
         <span
             class="keychain-wrapper keychain-top-right"
-            data-keychain="2"
+            data-tooltip="compact disc charm"
         >
             <img
                 class="corner-object"
@@ -1311,9 +1187,10 @@
             >
         </span>
 
+
         <span
             class="keychain-wrapper keychain-bottom-left"
-            data-keychain="3"
+            data-tooltip="cross charm"
         >
             <img
                 class="corner-object"
@@ -1322,9 +1199,10 @@
             >
         </span>
 
+
         <span
             class="keychain-wrapper keychain-bottom-right"
-            data-keychain="4"
+            data-tooltip="star charm"
         >
             <img
                 class="corner-object"
@@ -1333,29 +1211,30 @@
             >
         </span>
 
+
         <span
             class="keychain-wrapper keychain-mid-left"
-            data-keychain="5"
+            data-tooltip="shiny star"
         >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/star.png?raw=true"
                 alt="keychain 5"
-                data-tooltip="shiny star"
             >
         </span>
 
+
         <span
             class="keychain-wrapper keychain-mid-right"
-            data-keychain="6"
+            data-tooltip="cross charm"
         >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/cross.png?raw=true"
                 alt="keychain 6"
-                data-tooltip="cross charm"
             >
         </span>
+
 
         <!-- HEADER -->
 
@@ -1363,9 +1242,11 @@
             ★ Trxp's Home ★
         </div>
 
+
         <div class="y2k-strip">
-            &gt;&gt;&gt;&gt;&gt; TrxpOS &lt;&lt;&lt;&lt;&lt;
+            >>>>> TrxpOS <<<<<
         </div>
+
 
         <!-- PROFILE -->
 
@@ -1406,6 +1287,7 @@
 
         </div>
 
+
         <!-- CONTACT / SOCIAL LINKS -->
 
         <div class="box">
@@ -1432,9 +1314,12 @@
 
         </div>
 
+
         <!-- ABOUT ME -->
 
-        <h2>ABOUT ME</h2>
+        <h2>
+            ABOUT ME
+        </h2>
 
         <div class="box">
 
@@ -1444,41 +1329,29 @@
             </p>
 
             <p>
-
                 <strong>LIKES:</strong>
                 <br>
-
                 - 2000s history &amp; fashion
                 <br>
-
                 - Graphic Designing
                 <br>
-
                 - Old Media
                 <br>
-
                 - Web Designing
                 <br>
-
                 - Lost Media Research
                 <br>
-
                 - Minecraft
                 <br>
-
             </p>
 
             <p>
-
                 <strong>DISLIKES:</strong>
                 <br>
-
                 - Toxic People
                 <br>
-
                 - AI Generated Art
                 <br>
-
             </p>
 
             <div class="retro-line"></div>
@@ -1493,6 +1366,7 @@
             </div>
 
         </div>
+
 
         <!-- NOW PLAYING -->
 
@@ -1537,12 +1411,10 @@
                             class="music-progress"
                             id="music-progress"
                         >
-
                             <div
                                 class="music-progress-fill"
                                 id="music-progress-fill"
                             ></div>
-
                         </div>
 
                         <span
@@ -1573,6 +1445,7 @@
             </div>
 
         </div>
+
 
         <!-- TERMINAL -->
 
@@ -1611,10 +1484,10 @@
           $ $$
            $ $$
           $ $$
-$$$$ $$ $$$ $$$$$$$$ $$$$ 
+$$$$ $$ $$$ $$$$$$$$ $$$$
  $$$$ $ $$$$$ $$$ $$$$ $
            $ $
-           $$  
+           $$
           $ $$
            $ $
             $$
@@ -1626,7 +1499,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
           $ $$ $
           $ %& $
            & $
-    </pre>
+            </pre>
 
             <br>
 
@@ -1635,6 +1508,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             </div>
 
         </div>
+
 
         <!-- GALLERY -->
 
@@ -1672,6 +1546,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
     </div>
 
+
     <!-- FOOTER -->
 
     <footer>
@@ -1694,9 +1569,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
     <script>
 
+
         /* =========================================================
            1. Y2K TOOLTIP
-           ========================================================= */
+
+           This works on EVERY element with data-tooltip,
+           including ALL SIX keychain wrappers.
+        ========================================================== */
 
         (function () {
 
@@ -1707,33 +1586,35 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             const OFFSET_X = 16;
             const OFFSET_Y = 18;
 
+
             function createTooltip() {
 
-                if (tooltip) {
-                    return;
-                }
+                if (tooltip) return;
 
                 tooltip = document.createElement("div");
 
                 tooltip.id = "s-m-t-tooltip";
+
                 tooltip.className = "y2k-tooltip";
 
                 tooltip.style.position = "fixed";
+
                 tooltip.style.display = "none";
+
                 tooltip.style.pointerEvents = "none";
+
                 tooltip.style.zIndex = "2147483646";
 
                 document.body.appendChild(tooltip);
             }
+
 
             function showTooltip(element) {
 
                 const text =
                     element.getAttribute("data-tooltip");
 
-                if (!text) {
-                    return;
-                }
+                if (!text) return;
 
                 createTooltip();
 
@@ -1747,14 +1628,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 );
             }
 
+
             function hideTooltip() {
 
-                if (!tooltip) {
-                    return;
-                }
+                if (!tooltip) return;
 
                 tooltip.style.display = "none";
             }
+
 
             function positionTooltip(mouseX, mouseY) {
 
@@ -1776,25 +1657,30 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                 const padding = 8;
 
+
                 if (
                     x + rect.width >
                     window.innerWidth - padding
                 ) {
+
                     x =
                         mouseX -
                         rect.width -
                         OFFSET_X;
                 }
 
+
                 if (
                     y + rect.height >
                     window.innerHeight - padding
                 ) {
+
                     y =
                         mouseY -
                         rect.height -
                         OFFSET_Y;
                 }
+
 
                 if (x < padding) {
                     x = padding;
@@ -1804,6 +1690,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     y = padding;
                 }
 
+
                 tooltip.style.left =
                     Math.round(x) + "px";
 
@@ -1811,16 +1698,30 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     Math.round(y) + "px";
             }
 
+
             function setupTooltips() {
 
                 createTooltip();
+
+
+                /*
+                 * This now includes:
+                 *
+                 * - all 6 keychains
+                 * - Discord
+                 * - Telegram
+                 * - gallery images
+                 * - footer TOP
+                 */
 
                 const elements =
                     document.querySelectorAll(
                         "[data-tooltip]"
                     );
 
+
                 elements.forEach(function (element) {
+
 
                     element.addEventListener(
                         "mouseenter",
@@ -1835,6 +1736,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             showTooltip(element);
                         }
                     );
+
 
                     element.addEventListener(
                         "mousemove",
@@ -1853,18 +1755,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         }
                     );
 
+
                     element.addEventListener(
                         "mouseleave",
                         function () {
 
                             hideTooltip();
-
                         }
                     );
 
                 });
 
             }
+
 
             if (
                 document.readyState ===
@@ -1885,221 +1788,28 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
         })();
 
 
-        /* =========================================================
-           2. CUSTOM PIXEL CURSOR
-           
-           Restored from your current/public HTML.
-           
-           Cursor:
-           70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png
-           ========================================================= */
-
-        (function () {
-
-            "use strict";
-
-            const cursorURL =
-                'url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true")';
-
-            function applyCursor() {
-
-                const existing =
-                    document.getElementById(
-                        "y2k-custom-cursor"
-                    );
-
-                if (existing) {
-                    existing.remove();
-                }
-
-                const style =
-                    document.createElement("style");
-
-                style.id =
-                    "y2k-custom-cursor";
-
-                style.textContent = `
-
-                    html,
-                    body,
-                    body * {
-                        cursor:
-                            ${cursorURL}
-                            0 0,
-                            auto !important;
-                    }
-
-                    a,
-                    button,
-                    input,
-                    textarea,
-                    select,
-                    summary,
-                    [role="button"],
-                    [onclick],
-                    [data-tooltip] {
-                        cursor:
-                            ${cursorURL}
-                            0 0,
-                            pointer !important;
-                    }
-
-                    #s-m-t-tooltip {
-                        cursor:
-                            default !important;
-                    }
-
-                `;
-
-                document.head.appendChild(style);
-            }
-
-            function initCursor() {
-
-                if (!document.head) {
-
-                    setTimeout(
-                        initCursor,
-                        50
-                    );
-
-                    return;
-                }
-
-                applyCursor();
-            }
-
-            initCursor();
-
-        })();
-
 
         /* =========================================================
-           3. KEYCHAIN HOVER / SWING
-           
-           This is intentionally handled separately from the CSS.
-
-           Why:
-           The six keychains can overlap other elements slightly
-           because they sit outside the container. Explicit pointer
-           events make all six reliably activate.
-           ========================================================= */
-
-        (function () {
-
-            "use strict";
-
-            function setupKeychains() {
-
-                const keychains =
-                    document.querySelectorAll(
-                        ".keychain-wrapper"
-                    );
-
-                keychains.forEach(function (keychain) {
-
-                    /*
-                     * Make absolutely sure every keychain
-                     * participates in pointer interaction.
-                     */
-                    keychain.style.pointerEvents =
-                        "auto";
-
-                    keychain.style.zIndex =
-                        "50";
-
-                    keychain.addEventListener(
-                        "pointerenter",
-                        function () {
-
-                            keychain.classList.add(
-                                "is-hovered"
-                            );
-
-                        }
-                    );
-
-                    keychain.addEventListener(
-                        "pointerleave",
-                        function () {
-
-                            keychain.classList.remove(
-                                "is-hovered"
-                            );
-
-                        }
-                    );
-
-                    /*
-                     * mouseenter/mouseleave fallback
-                     * for older browsers and odd pointer
-                     * situations.
-                     */
-                    keychain.addEventListener(
-                        "mouseenter",
-                        function () {
-
-                            keychain.classList.add(
-                                "is-hovered"
-                            );
-
-                        }
-                    );
-
-                    keychain.addEventListener(
-                        "mouseleave",
-                        function () {
-
-                            keychain.classList.remove(
-                                "is-hovered"
-                            );
-
-                        }
-                    );
-
-                });
-
-            }
-
-            if (
-                document.readyState ===
-                "loading"
-            ) {
-
-                document.addEventListener(
-                    "DOMContentLoaded",
-                    setupKeychains,
-                    { once: true }
-                );
-
-            } else {
-
-                setupKeychains();
-
-            }
-
-        })();
-
-
-        /* =========================================================
-           4. ONEKO
-           ========================================================= */
+           2. ONEKO
+        ========================================================== */
 
         (function oneko() {
 
             "use strict";
+
 
             const mediaQuery =
                 window.matchMedia(
                     "(prefers-reduced-motion: reduce)"
                 );
 
-            if (mediaQuery.matches) {
-                return;
-            }
+
+            if (mediaQuery.matches) return;
+
 
             const nekoEl =
                 document.createElement("div");
+
 
             let nekoPosX = 32;
             let nekoPosY = 32;
@@ -2115,6 +1825,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             let idleAnimationFrame = 0;
 
             const nekoSpeed = 10;
+
 
             const spriteSets = {
 
@@ -2203,27 +1914,23 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
             };
 
+
             function init() {
 
                 const nekoFile =
                     "https://github.com/trxpvoidz/personal-bio/blob/main/oneko.gif?raw=true";
 
+
                 nekoEl.id = "oneko";
 
-                nekoEl.ariaHidden =
-                    "true";
+                nekoEl.ariaHidden = "true";
 
-                nekoEl.style.width =
-                    "32px";
+                nekoEl.style.width = "32px";
+                nekoEl.style.height = "32px";
 
-                nekoEl.style.height =
-                    "32px";
+                nekoEl.style.position = "fixed";
 
-                nekoEl.style.position =
-                    "fixed";
-
-                nekoEl.style.pointerEvents =
-                    "none";
+                nekoEl.style.pointerEvents = "none";
 
                 nekoEl.style.imageRendering =
                     "pixelated";
@@ -2242,9 +1949,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     nekoFile +
                     '")';
 
+
                 document.body.appendChild(
                     nekoEl
                 );
+
 
                 document.addEventListener(
                     "mousemove",
@@ -2255,28 +1964,33 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                         mousePosY =
                             event.clientY;
-
                     }
                 );
+
 
                 window.requestAnimationFrame(
                     onAnimationFrame
                 );
-
             }
+
 
             let lastFrameTimestamp;
 
-            function onAnimationFrame(timestamp) {
+
+            function onAnimationFrame(
+                timestamp
+            ) {
 
                 if (!nekoEl.isConnected) {
                     return;
                 }
 
+
                 if (!lastFrameTimestamp) {
                     lastFrameTimestamp =
                         timestamp;
                 }
+
 
                 if (
                     timestamp -
@@ -2288,13 +2002,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         timestamp;
 
                     frame();
-
                 }
+
 
                 window.requestAnimationFrame(
                     onAnimationFrame
                 );
             }
+
 
             function setSprite(
                 name,
@@ -2305,11 +2020,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return;
                 }
 
+
                 const sprite =
                     spriteSets[name][
                         frame %
                         spriteSets[name].length
                     ];
+
 
                 nekoEl.style.backgroundPosition =
                     (sprite[0] * 32) +
@@ -2318,18 +2035,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "px";
             }
 
+
             function resetIdleAnimation() {
 
-                idleAnimation =
-                    null;
+                idleAnimation = null;
 
-                idleAnimationFrame =
-                    0;
+                idleAnimationFrame = 0;
             }
+
 
             function idle() {
 
                 idleTime += 1;
+
 
                 if (
                     idleTime > 10 &&
@@ -2344,23 +2062,20 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         "scratchSelf"
                     ];
 
-                    if (
-                        nekoPosX < 32
-                    ) {
 
+                    if (nekoPosX < 32) {
                         availableIdleAnimations.push(
                             "scratchWallW"
                         );
                     }
 
-                    if (
-                        nekoPosY < 32
-                    ) {
 
+                    if (nekoPosY < 32) {
                         availableIdleAnimations.push(
                             "scratchWallN"
                         );
                     }
+
 
                     if (
                         nekoPosX >
@@ -2372,6 +2087,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         );
                     }
 
+
                     if (
                         nekoPosY >
                         window.innerHeight - 32
@@ -2382,6 +2098,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         );
                     }
 
+
                     idleAnimation =
                         availableIdleAnimations[
                             Math.floor(
@@ -2391,12 +2108,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         ];
                 }
 
+
                 switch (idleAnimation) {
 
                     case "sleeping":
 
                         if (
-                            idleAnimationFrame < 8
+                            idleAnimationFrame <
+                            8
                         ) {
 
                             setSprite(
@@ -2407,6 +2126,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             break;
                         }
 
+
                         setSprite(
                             "sleeping",
                             Math.floor(
@@ -2414,6 +2134,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                 4
                             )
                         );
+
 
                         if (
                             idleAnimationFrame >
@@ -2424,6 +2145,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         }
 
                         break;
+
 
                     case "scratchWallN":
                     case "scratchWallS":
@@ -2436,6 +2158,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             idleAnimationFrame
                         );
 
+
                         if (
                             idleAnimationFrame >
                             9
@@ -2445,6 +2168,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         }
 
                         break;
+
 
                     default:
 
@@ -2456,12 +2180,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         return;
                 }
 
+
                 idleAnimationFrame += 1;
             }
+
 
             function frame() {
 
                 frameCount += 1;
+
 
                 const diffX =
                     nekoPosX -
@@ -2471,14 +2198,17 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     nekoPosY -
                     mousePosY;
 
+
                 const distance =
                     Math.sqrt(
                         diffX ** 2 +
                         diffY ** 2
                     );
 
+
                 if (
-                    distance < nekoSpeed ||
+                    distance <
+                    nekoSpeed ||
                     distance < 48
                 ) {
 
@@ -2487,15 +2217,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return;
                 }
 
-                idleAnimation =
-                    null;
 
-                idleAnimationFrame =
-                    0;
+                idleAnimation = null;
 
-                if (
-                    idleTime > 1
-                ) {
+                idleAnimationFrame = 0;
+
+
+                if (idleTime > 1) {
 
                     setSprite(
                         "alert",
@@ -2513,40 +2241,49 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return;
                 }
 
+
                 let direction = "";
+
 
                 direction =
                     diffY / distance > 0.5
                         ? "N"
                         : "";
 
+
                 direction +=
                     diffY / distance < -0.5
                         ? "S"
                         : "";
+
 
                 direction +=
                     diffX / distance > 0.5
                         ? "W"
                         : "";
 
+
                 direction +=
                     diffX / distance < -0.5
                         ? "E"
                         : "";
+
 
                 setSprite(
                     direction,
                     frameCount
                 );
 
+
                 nekoPosX -=
                     (diffX / distance) *
                     nekoSpeed;
 
+
                 nekoPosY -=
                     (diffY / distance) *
                     nekoSpeed;
+
 
                 nekoPosX =
                     Math.min(
@@ -2557,6 +2294,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         window.innerWidth - 16
                     );
 
+
                 nekoPosY =
                     Math.min(
                         Math.max(
@@ -2566,14 +2304,17 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         window.innerHeight - 16
                     );
 
+
                 nekoEl.style.left =
                     (nekoPosX - 16) +
                     "px";
+
 
                 nekoEl.style.top =
                     (nekoPosY - 16) +
                     "px";
             }
+
 
             if (
                 document.readyState ===
@@ -2595,9 +2336,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
         })();
 
 
+
         /* =========================================================
-           5. Y2K PIXEL DUST CURSOR TRAIL
-           ========================================================= */
+           3. Y2K PIXEL DUST CURSOR TRAIL
+        ========================================================== */
 
         (function () {
 
@@ -2621,16 +2363,18 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 pixelStep: 2,
 
                 choppyMovement: 2
-
             };
+
 
             const canvas =
                 document.createElement(
                     "canvas"
                 );
 
+
             canvas.id =
                 "y2k-pixel-dust";
+
 
             canvas.style.position =
                 "fixed";
@@ -2656,31 +2400,39 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             canvas.style.imageRendering =
                 "pixelated";
 
+
             document.body.appendChild(
                 canvas
             );
 
+
             const ctx =
                 canvas.getContext("2d");
 
+
             ctx.imageSmoothingEnabled =
                 false;
+
 
             function resizeCanvas() {
 
                 const dpr =
                     Math.min(
-                        window.devicePixelRatio || 1,
+                        window.devicePixelRatio ||
+                        1,
                         2
                     );
+
 
                 canvas.width =
                     window.innerWidth *
                     dpr;
 
+
                 canvas.height =
                     window.innerHeight *
                     dpr;
+
 
                 ctx.setTransform(
                     dpr,
@@ -2691,16 +2443,20 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     0
                 );
 
+
                 ctx.imageSmoothingEnabled =
                     false;
             }
 
+
             resizeCanvas();
+
 
             window.addEventListener(
                 "resize",
                 resizeCanvas
             );
+
 
             let mouseX =
                 window.innerWidth / 2;
@@ -2708,11 +2464,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             let mouseY =
                 window.innerHeight / 2;
 
-            let lastX =
-                mouseX;
 
-            let lastY =
-                mouseY;
+            let lastX = mouseX;
+            let lastY = mouseY;
+
 
             document.addEventListener(
                 "mousemove",
@@ -2723,11 +2478,12 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     mouseY =
                         event.clientY;
-
                 }
             );
 
+
             const particles = [];
+
 
             function random(
                 min,
@@ -2739,6 +2495,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     min;
             }
 
+
             function createParticle() {
 
                 if (
@@ -2749,8 +2506,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return;
                 }
 
+
                 const white =
                     Math.random() > 0.5;
+
 
                 const p = {
 
@@ -2790,20 +2549,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     maxLife: 0,
 
-                    white:
-                        white,
+                    white: white,
 
                     tick: 0
-
                 };
+
 
                 p.maxLife =
                     p.life;
 
-                particles.push(
-                    p
-                );
+
+                particles.push(p);
             }
+
 
             function drawPixel(
                 particle
@@ -2812,6 +2570,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 const p =
                     particle;
 
+
                 const alpha =
                     Math.max(
                         0,
@@ -2819,10 +2578,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         p.maxLife
                     );
 
+
                 ctx.save();
+
 
                 ctx.globalAlpha =
                     alpha;
+
 
                 if (p.white) {
 
@@ -2841,8 +2603,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         "#fff";
                 }
 
-                ctx.lineWidth =
-                    1;
+
+                ctx.lineWidth = 1;
+
 
                 const x =
                     Math.round(
@@ -2851,6 +2614,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     ) *
                     SETTINGS.pixelStep;
 
+
                 const y =
                     Math.round(
                         p.y /
@@ -2858,12 +2622,12 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     ) *
                     SETTINGS.pixelStep;
 
+
                 const size =
                     p.size;
 
-                if (
-                    size <= 4
-                ) {
+
+                if (size <= 4) {
 
                     ctx.fillRect(
                         x,
@@ -2889,10 +2653,71 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     );
                 }
 
+
                 ctx.restore();
             }
 
+
+            function drawSpark(
+                x,
+                y,
+                white
+            ) {
+
+                ctx.save();
+
+
+                ctx.globalAlpha =
+                    random(
+                        0.35,
+                        0.9
+                    );
+
+
+                ctx.fillStyle =
+                    white
+                        ? "#fff"
+                        : "#000";
+
+
+                ctx.strokeStyle =
+                    white
+                        ? "#000"
+                        : "#fff";
+
+
+                ctx.lineWidth = 1;
+
+
+                const size = 3;
+
+
+                ctx.fillRect(
+                    Math.round(x),
+                    Math.round(
+                        y - size
+                    ),
+                    1,
+                    size * 2 + 1
+                );
+
+
+                ctx.fillRect(
+                    Math.round(
+                        x - size
+                    ),
+                    Math.round(y),
+                    size * 2 + 1,
+                    1
+                );
+
+
+                ctx.restore();
+            }
+
+
             let spawnCounter = 0;
+
 
             function spawnParticles() {
 
@@ -2904,18 +2729,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     mouseY -
                     lastY;
 
+
                 const distance =
                     Math.sqrt(
                         dx * dx +
                         dy * dy
                     );
 
-                if (
-                    distance > 0.5
-                ) {
+
+                if (distance > 0.5) {
 
                     spawnCounter +=
                         SETTINGS.spawnRate;
+
 
                     while (
                         spawnCounter >= 1
@@ -2927,12 +2753,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     }
                 }
 
-                lastX =
-                    mouseX;
 
-                lastY =
-                    mouseY;
+                lastX = mouseX;
+                lastY = mouseY;
             }
+
 
             function updateParticle(
                 particle,
@@ -2942,6 +2767,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 particle.life -=
                     delta;
 
+
                 if (
                     particle.life <= 0
                 ) {
@@ -2949,16 +2775,17 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return false;
                 }
 
+
                 particle.tick +=
                     delta;
+
 
                 if (
                     particle.tick >=
                     SETTINGS.choppyMovement
                 ) {
 
-                    particle.tick =
-                        0;
+                    particle.tick = 0;
 
                     particle.x +=
                         particle.vx;
@@ -2970,11 +2797,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         SETTINGS.gravity;
                 }
 
+
                 return true;
             }
 
+
             let previousTime =
                 performance.now();
+
 
             function animate(
                 currentTime
@@ -2987,8 +2817,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         40
                     );
 
+
                 previousTime =
                     currentTime;
+
 
                 ctx.clearRect(
                     0,
@@ -2997,7 +2829,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     window.innerHeight
                 );
 
+
                 spawnParticles();
+
 
                 for (
                     let i =
@@ -3008,6 +2842,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     const particle =
                         particles[i];
+
 
                     if (
                         !updateParticle(
@@ -3024,15 +2859,38 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         continue;
                     }
 
+
                     drawPixel(
                         particle
                     );
                 }
 
+
+                if (
+                    Math.random() <
+                    0.035 &&
+                    Math.abs(
+                        mouseX - lastX
+                    ) > 1
+                ) {
+
+                    drawSpark(
+                        mouseX +
+                            random(-6, 6),
+
+                        mouseY +
+                            random(-6, 6),
+
+                        Math.random() > 0.5
+                    );
+                }
+
+
                 requestAnimationFrame(
                     animate
                 );
             }
+
 
             requestAnimationFrame(
                 animate
@@ -3041,9 +2899,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
         })();
 
 
+
         /* =========================================================
-           6. Y2K MP3 PLAYER
-           ========================================================= */
+           4. Y2K MP3 PLAYER
+        ========================================================== */
 
         (function () {
 
@@ -3052,39 +2911,45 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "music"
                 );
 
+
             const playButton =
                 document.getElementById(
                     "play-button"
                 );
+
 
             const muteButton =
                 document.getElementById(
                     "mute-button"
                 );
 
+
             const progress =
                 document.getElementById(
                     "music-progress"
                 );
+
 
             const progressFill =
                 document.getElementById(
                     "music-progress-fill"
                 );
 
+
             const currentTime =
                 document.getElementById(
                     "current-time"
                 );
+
 
             const duration =
                 document.getElementById(
                     "duration"
                 );
 
-            if (!audio) {
-                return;
-            }
+
+            if (!audio) return;
+
 
             function formatTime(
                 seconds
@@ -3099,10 +2964,12 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     return "0:00";
                 }
 
+
                 const minutes =
                     Math.floor(
                         seconds / 60
                     );
+
 
                 const secondsPart =
                     Math.floor(
@@ -3114,12 +2981,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         "0"
                     );
 
+
                 return (
                     minutes +
                     ":" +
                     secondsPart
                 );
             }
+
 
             audio.addEventListener(
                 "loadedmetadata",
@@ -3134,6 +3003,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     }
                 }
             );
+
 
             if (playButton) {
 
@@ -3175,6 +3045,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 );
             }
 
+
             audio.addEventListener(
                 "timeupdate",
                 function () {
@@ -3186,6 +3057,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         return;
                     }
 
+
                     const percent =
                         (
                             audio.currentTime /
@@ -3193,17 +3065,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         ) *
                         100;
 
-                    if (
-                        progressFill
-                    ) {
+
+                    if (progressFill) {
 
                         progressFill.style.width =
                             percent + "%";
                     }
 
-                    if (
-                        currentTime
-                    ) {
+
+                    if (currentTime) {
 
                         currentTime.textContent =
                             formatTime(
@@ -3212,6 +3082,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     }
                 }
             );
+
 
             if (progress) {
 
@@ -3226,12 +3097,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             return;
                         }
 
+
                         const rect =
                             progress.getBoundingClientRect();
+
 
                         const position =
                             event.clientX -
                             rect.left;
+
 
                         const percentage =
                             Math.max(
@@ -3243,12 +3117,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                 )
                             );
 
+
                         audio.currentTime =
                             percentage *
                             audio.duration;
                     }
                 );
             }
+
 
             if (muteButton) {
 
@@ -3259,6 +3135,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         audio.muted =
                             !audio.muted;
 
+
                         muteButton.textContent =
                             audio.muted
                                 ? "🔇"
@@ -3266,6 +3143,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     }
                 );
             }
+
 
             audio.addEventListener(
                 "ended",
@@ -3277,11 +3155,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             "▶";
                     }
 
+
                     if (progressFill) {
 
                         progressFill.style.width =
                             "0%";
                     }
+
 
                     if (currentTime) {
 
@@ -3297,3 +3177,4 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
 </body>
 </html>
+```
