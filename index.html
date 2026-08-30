@@ -4,29 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-        rel="icon"
-        type="image/png"
-        href="https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true"
-    >
+    <link rel="icon" type="image/png"
+        href="https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true">
 
     <title>𝔱𝔯𝔵𝔭˚₊‧⁺⋆♱</title>
 
     <!-- Discord / Open Graph embedding -->
     <meta property="og:title" content="Trxp˚₊‧⁺⋆♱">
-    <meta
-        property="og:description"
-        content="★ Designer / Developer / Creator — Welcome to my personal website."
-    >
-    <meta
-        property="og:image"
-        content="https://github.com/trxpvoidz/personal-bio/blob/main/6259b833755c23a4dfcde6f34369599e.png?raw=true"
-    >
+    <meta property="og:description"
+        content="★ Designer / Developer / Creator — Welcome to my personal website.">
+    <meta property="og:image"
+        content="https://github.com/trxpvoidz/personal-bio/blob/main/6259b833755c23a4dfcde6f34369599e.png?raw=true">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#000000">
 
     <style>
-
         /* =========================================================
            Y2K MONOCHROME WEB STYLE
            MS GOTHIC / BLACK + WHITE / PIXEL CURSOR
@@ -34,9 +26,8 @@
 
         @font-face {
             font-family: "MSGothic";
-            src: url(
-                "https://github.com/07th-mod/ui-editing-scripts/raw/refs/heads/master/assets/fonts/MS-Gothic.ttf"
-            ) format("truetype");
+            src: url("https://github.com/07th-mod/ui-editing-scripts/raw/refs/heads/master/assets/fonts/MS-Gothic.ttf")
+                format("truetype");
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -64,10 +55,7 @@
             color: #000;
             background-color: #fff;
 
-            background-image: url(
-                "https://github.com/trxpvoidz/personal-bio/blob/main/Untitled440_20260829025922.png?raw=true"
-            );
-
+            background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/Untitled440_20260829025922.png?raw=true");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -82,9 +70,8 @@
         }
 
         /*
-         * The custom cursor is applied by the JS at the bottom.
-         * Do NOT add another cursor:url() here because it can fight
-         * with the global cursor implementation.
+         * Custom cursor is installed by JavaScript below.
+         * This prevents normal cursor rules from fighting with it.
          */
 
         a,
@@ -122,7 +109,7 @@
         }
 
         /* =========================================================
-           MAIN CONTAINER
+           CONTAINER
            ========================================================= */
 
         .container {
@@ -313,7 +300,6 @@
         textarea,
         select {
             width: 100%;
-
             padding: 7px;
 
             font-family: "MSGothic", "MS Gothic", monospace;
@@ -376,13 +362,11 @@
             height: auto;
 
             border: 2px solid #000;
-
             image-rendering: pixelated;
         }
 
         .pixel {
             image-rendering: pixelated;
-
             border: 2px solid #000;
             box-shadow: 4px 4px 0 #000;
         }
@@ -571,7 +555,6 @@
             content: "";
 
             display: block;
-
             height: 2px;
 
             margin: 7px -10px -8px -10px;
@@ -620,7 +603,6 @@
 
         footer {
             width: min(900px, 100%);
-
             margin: 30px auto 10px;
             padding: 8px;
 
@@ -735,6 +717,7 @@
             display: flex;
 
             flex-wrap: wrap;
+
             gap: 8px;
 
             margin-top: 10px;
@@ -809,6 +792,13 @@
 
         /* =========================================================
            KEYCHAINS
+           
+           IMPORTANT:
+           The position + base rotation live on the wrapper.
+           Only the charm itself swings.
+
+           This prevents the old problem where the animation
+           overwrote the wrapper's positioning/rotation.
            ========================================================= */
 
         .keychain-wrapper {
@@ -817,11 +807,17 @@
             width: 64px;
             height: 64px;
 
-            z-index: 5;
+            z-index: 50;
 
             pointer-events: auto;
 
             display: block;
+
+            /*
+             * Makes the entire 64x64 area hoverable,
+             * not just the non-transparent pixels.
+             */
+            touch-action: auto;
         }
 
         .keychain-top-left {
@@ -881,82 +877,90 @@
 
             image-rendering: pixelated;
 
-            transform-origin: center center;
+            /*
+             * Pivot near the top of the charm.
+             * This makes it visually swing from where
+             * the keychain would be hanging.
+             */
+            transform-origin: 50% 8%;
 
+            /*
+             * IMPORTANT:
+             * The image itself receives the animation.
+             * The wrapper keeps its original transform.
+             */
             will-change: transform;
+
+            pointer-events: auto;
+
+            display: block;
         }
 
         /*
-         * KEYCHAIN SHAKE
+         * Do NOT use the old crazy translate + rotate shake.
          *
-         * The wrapper itself does NOT animate.
-         * This means the original corner positioning and rotation
-         * remain stable while the charm rattles independently.
+         * The new animation is a gentle pendulum:
+         *
+         *       \  |  /
+         *        \ | /
+         *         \|/
+         *
+         * It swings around the top attachment point.
          */
 
-        .keychain-wrapper:hover .corner-object {
+        .keychain-wrapper.is-hovered .corner-object {
             animation:
-                keychain-shake
-                0.32s
-                steps(2, end)
+                keychain-swing
+                0.72s
+                ease-in-out
                 infinite;
         }
 
-        @keyframes keychain-shake {
+        /*
+         * Also keep CSS :hover as a fallback.
+         * JS below adds .is-hovered as the reliable trigger.
+         */
+        .keychain-wrapper:hover .corner-object {
+            animation:
+                keychain-swing
+                0.72s
+                ease-in-out
+                infinite;
+        }
 
+        @keyframes keychain-swing {
             0% {
-                transform:
-                    translate(0, 0)
-                    rotate(0deg);
+                transform: rotate(0deg);
             }
 
-            12% {
-                transform:
-                    translate(-2px, 1px)
-                    rotate(-4deg);
-            }
-
-            25% {
-                transform:
-                    translate(3px, -2px)
-                    rotate(5deg);
-            }
-
-            37% {
-                transform:
-                    translate(-3px, 2px)
-                    rotate(-5deg);
+            20% {
+                transform: rotate(-3deg);
             }
 
             50% {
-                transform:
-                    translate(2px, -1px)
-                    rotate(4deg);
+                transform: rotate(3deg);
             }
 
-            62% {
-                transform:
-                    translate(-2px, 2px)
-                    rotate(-3deg);
-            }
-
-            75% {
-                transform:
-                    translate(2px, 1px)
-                    rotate(3deg);
-            }
-
-            87% {
-                transform:
-                    translate(-1px, -1px)
-                    rotate(-2deg);
+            80% {
+                transform: rotate(-2deg);
             }
 
             100% {
-                transform:
-                    translate(0, 0)
-                    rotate(0deg);
+                transform: rotate(0deg);
             }
+        }
+
+        /*
+         * Prevent animation from looking like it jumps
+         * when the cursor leaves.
+         */
+        .keychain-wrapper .corner-object {
+            transition: transform 0.18s ease-out;
+        }
+
+        .keychain-wrapper.is-hovered .corner-object,
+        .keychain-wrapper:hover .corner-object {
+            transition: none;
         }
 
         /* =========================================================
@@ -1033,10 +1037,7 @@
 
             color: #fff;
 
-            font-family:
-                "MSGothic",
-                "MS Gothic",
-                monospace;
+            font-family: "MSGothic", "MS Gothic", monospace;
         }
 
         .music-controls {
@@ -1060,11 +1061,7 @@
 
             box-shadow: none;
 
-            font-family:
-                "MSGothic",
-                "MS Gothic",
-                monospace;
-
+            font-family: "MSGothic", "MS Gothic", monospace;
             font-size: 12px;
 
             cursor: pointer;
@@ -1072,6 +1069,7 @@
 
         .music-controls button:hover {
             color: #fff;
+
             background: #000;
 
             border-color: #fff;
@@ -1132,8 +1130,7 @@
 
             border-right: 2px solid #fff;
 
-            transition:
-                width 0.05s linear;
+            transition: width 0.05s linear;
         }
 
         .music-progress:hover {
@@ -1268,6 +1265,7 @@
 
             .now-playing {
                 align-items: flex-start;
+
                 flex-direction: column;
             }
 
@@ -1280,7 +1278,6 @@
                 width: 100%;
             }
         }
-
     </style>
 </head>
 
@@ -1292,7 +1289,10 @@
              KEYCHAINS
              ===================================================== -->
 
-        <span class="keychain-wrapper keychain-top-left">
+        <span
+            class="keychain-wrapper keychain-top-left"
+            data-keychain="1"
+        >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/image.png?raw=true"
@@ -1300,7 +1300,10 @@
             >
         </span>
 
-        <span class="keychain-wrapper keychain-top-right">
+        <span
+            class="keychain-wrapper keychain-top-right"
+            data-keychain="2"
+        >
             <img
                 class="corner-object"
                 src="https://techterms.com/img/xl/cd_290.png"
@@ -1308,7 +1311,10 @@
             >
         </span>
 
-        <span class="keychain-wrapper keychain-bottom-left">
+        <span
+            class="keychain-wrapper keychain-bottom-left"
+            data-keychain="3"
+        >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/cross.png?raw=true"
@@ -1316,7 +1322,10 @@
             >
         </span>
 
-        <span class="keychain-wrapper keychain-bottom-right">
+        <span
+            class="keychain-wrapper keychain-bottom-right"
+            data-keychain="4"
+        >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/star.png?raw=true"
@@ -1324,7 +1333,10 @@
             >
         </span>
 
-        <span class="keychain-wrapper keychain-mid-left">
+        <span
+            class="keychain-wrapper keychain-mid-left"
+            data-keychain="5"
+        >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/star.png?raw=true"
@@ -1333,7 +1345,10 @@
             >
         </span>
 
-        <span class="keychain-wrapper keychain-mid-right">
+        <span
+            class="keychain-wrapper keychain-mid-right"
+            data-keychain="6"
+        >
             <img
                 class="corner-object"
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/cross.png?raw=true"
@@ -1342,9 +1357,7 @@
             >
         </span>
 
-        <!-- =====================================================
-             HEADER
-             ===================================================== -->
+        <!-- HEADER -->
 
         <div class="header">
             ★ Trxp's Home ★
@@ -1354,9 +1367,7 @@
             &gt;&gt;&gt;&gt;&gt; TrxpOS &lt;&lt;&lt;&lt;&lt;
         </div>
 
-        <!-- =====================================================
-             PROFILE
-             ===================================================== -->
+        <!-- PROFILE -->
 
         <div class="profile">
 
@@ -1392,11 +1403,10 @@
                 </div>
 
             </div>
+
         </div>
 
-        <!-- =====================================================
-             CONTACT
-             ===================================================== -->
+        <!-- CONTACT / SOCIAL LINKS -->
 
         <div class="box">
 
@@ -1419,11 +1429,10 @@
                 </a>
 
             </div>
+
         </div>
 
-        <!-- =====================================================
-             ABOUT ME
-             ===================================================== -->
+        <!-- ABOUT ME -->
 
         <h2>ABOUT ME</h2>
 
@@ -1436,23 +1445,39 @@
 
             <p>
 
-                <strong>LIKES:</strong><br>
+                <strong>LIKES:</strong>
+                <br>
 
-                - 2000s history &amp; fashion<br>
-                - Graphic Designing<br>
-                - Old Media<br>
-                - Web Designing<br>
-                - Lost Media Research<br>
-                - Minecraft<br>
+                - 2000s history &amp; fashion
+                <br>
+
+                - Graphic Designing
+                <br>
+
+                - Old Media
+                <br>
+
+                - Web Designing
+                <br>
+
+                - Lost Media Research
+                <br>
+
+                - Minecraft
+                <br>
 
             </p>
 
             <p>
 
-                <strong>DISLIKES:</strong><br>
+                <strong>DISLIKES:</strong>
+                <br>
 
-                - Toxic People<br>
-                - AI Generated Art<br>
+                - Toxic People
+                <br>
+
+                - AI Generated Art
+                <br>
 
             </p>
 
@@ -1469,11 +1494,11 @@
 
         </div>
 
-        <!-- =====================================================
-             NOW PLAYING
-             ===================================================== -->
+        <!-- NOW PLAYING -->
 
-        <h2>NOW PLAYING / WORKING ON</h2>
+        <h2>
+            NOW PLAYING / WORKING ON
+        </h2>
 
         <div class="black-box">
 
@@ -1512,10 +1537,12 @@
                             class="music-progress"
                             id="music-progress"
                         >
+
                             <div
                                 class="music-progress-fill"
                                 id="music-progress-fill"
                             ></div>
+
                         </div>
 
                         <span
@@ -1531,6 +1558,7 @@
                         id="music"
                         preload="metadata"
                     >
+
                         <source
                             src="https://github.com/trxpvoidz/personal-bio/raw/refs/heads/main/it%E2%80%99s%20like%20i%E2%80%99m%20not%20even%20here_spotdown.org.mp3"
                             type="audio/mpeg"
@@ -1546,11 +1574,11 @@
 
         </div>
 
-        <!-- =====================================================
-             TERMINAL
-             ===================================================== -->
+        <!-- TERMINAL -->
 
-        <h2>TERMINAL</h2>
+        <h2>
+            TERMINAL
+        </h2>
 
         <div class="terminal">
 
@@ -1583,10 +1611,10 @@
           $ $$
            $ $$
           $ $$
-$$$$ $$ $$$ $$$$$$$$ $$$$
+$$$$ $$ $$$ $$$$$$$$ $$$$ 
  $$$$ $ $$$$$ $$$ $$$$ $
            $ $
-           $$
+           $$  
           $ $$
            $ $
             $$
@@ -1596,8 +1624,8 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
            $ $$
           $ $ $
           $ $$ $
-          $ %&amp; $
-           &amp; $
+          $ %& $
+           & $
     </pre>
 
             <br>
@@ -1608,11 +1636,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
         </div>
 
-        <!-- =====================================================
-             GALLERY
-             ===================================================== -->
+        <!-- GALLERY -->
 
-        <h2>RANDOM STUFF</h2>
+        <h2>
+            RANDOM STUFF
+        </h2>
 
         <div class="gallery">
 
@@ -1644,9 +1672,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
     </div>
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1665,6 +1691,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
     </footer>
 
+
     <script>
 
         /* =========================================================
@@ -1682,7 +1709,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
             function createTooltip() {
 
-                if (tooltip) return;
+                if (tooltip) {
+                    return;
+                }
 
                 tooltip = document.createElement("div");
 
@@ -1695,7 +1724,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 tooltip.style.zIndex = "2147483646";
 
                 document.body.appendChild(tooltip);
-
             }
 
             function showTooltip(element) {
@@ -1703,7 +1731,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 const text =
                     element.getAttribute("data-tooltip");
 
-                if (!text) return;
+                if (!text) {
+                    return;
+                }
 
                 createTooltip();
 
@@ -1715,15 +1745,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     window.lastMouseX || 0,
                     window.lastMouseY || 0
                 );
-
             }
 
             function hideTooltip() {
 
-                if (!tooltip) return;
+                if (!tooltip) {
+                    return;
+                }
 
                 tooltip.style.display = "none";
-
             }
 
             function positionTooltip(mouseX, mouseY) {
@@ -1779,7 +1809,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                 tooltip.style.top =
                     Math.round(y) + "px";
-
             }
 
             function setupTooltips() {
@@ -1804,7 +1833,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                 event.clientY;
 
                             showTooltip(element);
-
                         }
                     );
 
@@ -1822,7 +1850,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                 event.clientX,
                                 event.clientY
                             );
-
                         }
                     );
 
@@ -1860,18 +1887,16 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
         /* =========================================================
            2. CUSTOM PIXEL CURSOR
+           
+           Restored from your current/public HTML.
+           
+           Cursor:
+           70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png
            ========================================================= */
 
         (function () {
 
             "use strict";
-
-            /*
-             * Your cursor:
-             *
-             * https://github.com/trxpvoidz/personal-bio/blob/main/
-             * 70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true
-             */
 
             const cursorURL =
                 'url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true")';
@@ -1920,13 +1945,13 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     }
 
                     #s-m-t-tooltip {
-                        cursor: default !important;
+                        cursor:
+                            default !important;
                     }
 
                 `;
 
                 document.head.appendChild(style);
-
             }
 
             function initCursor() {
@@ -1939,11 +1964,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     );
 
                     return;
-
                 }
 
                 applyCursor();
-
             }
 
             initCursor();
@@ -1952,7 +1975,114 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
 
         /* =========================================================
-           3. ONEKO
+           3. KEYCHAIN HOVER / SWING
+           
+           This is intentionally handled separately from the CSS.
+
+           Why:
+           The six keychains can overlap other elements slightly
+           because they sit outside the container. Explicit pointer
+           events make all six reliably activate.
+           ========================================================= */
+
+        (function () {
+
+            "use strict";
+
+            function setupKeychains() {
+
+                const keychains =
+                    document.querySelectorAll(
+                        ".keychain-wrapper"
+                    );
+
+                keychains.forEach(function (keychain) {
+
+                    /*
+                     * Make absolutely sure every keychain
+                     * participates in pointer interaction.
+                     */
+                    keychain.style.pointerEvents =
+                        "auto";
+
+                    keychain.style.zIndex =
+                        "50";
+
+                    keychain.addEventListener(
+                        "pointerenter",
+                        function () {
+
+                            keychain.classList.add(
+                                "is-hovered"
+                            );
+
+                        }
+                    );
+
+                    keychain.addEventListener(
+                        "pointerleave",
+                        function () {
+
+                            keychain.classList.remove(
+                                "is-hovered"
+                            );
+
+                        }
+                    );
+
+                    /*
+                     * mouseenter/mouseleave fallback
+                     * for older browsers and odd pointer
+                     * situations.
+                     */
+                    keychain.addEventListener(
+                        "mouseenter",
+                        function () {
+
+                            keychain.classList.add(
+                                "is-hovered"
+                            );
+
+                        }
+                    );
+
+                    keychain.addEventListener(
+                        "mouseleave",
+                        function () {
+
+                            keychain.classList.remove(
+                                "is-hovered"
+                            );
+
+                        }
+                    );
+
+                });
+
+            }
+
+            if (
+                document.readyState ===
+                "loading"
+            ) {
+
+                document.addEventListener(
+                    "DOMContentLoaded",
+                    setupKeychains,
+                    { once: true }
+                );
+
+            } else {
+
+                setupKeychains();
+
+            }
+
+        })();
+
+
+        /* =========================================================
+           4. ONEKO
            ========================================================= */
 
         (function oneko() {
@@ -1964,7 +2094,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "(prefers-reduced-motion: reduce)"
                 );
 
-            if (mediaQuery.matches) return;
+            if (mediaQuery.matches) {
+                return;
+            }
 
             const nekoEl =
                 document.createElement("div");
@@ -2078,14 +2210,20 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                 nekoEl.id = "oneko";
 
-                nekoEl.ariaHidden = "true";
+                nekoEl.ariaHidden =
+                    "true";
 
-                nekoEl.style.width = "32px";
-                nekoEl.style.height = "32px";
+                nekoEl.style.width =
+                    "32px";
 
-                nekoEl.style.position = "fixed";
+                nekoEl.style.height =
+                    "32px";
 
-                nekoEl.style.pointerEvents = "none";
+                nekoEl.style.position =
+                    "fixed";
+
+                nekoEl.style.pointerEvents =
+                    "none";
 
                 nekoEl.style.imageRendering =
                     "pixelated";
@@ -2129,9 +2267,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
             let lastFrameTimestamp;
 
-            function onAnimationFrame(
-                timestamp
-            ) {
+            function onAnimationFrame(timestamp) {
 
                 if (!nekoEl.isConnected) {
                     return;
@@ -2158,7 +2294,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 window.requestAnimationFrame(
                     onAnimationFrame
                 );
-
             }
 
             function setSprite(
@@ -2181,14 +2316,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "px " +
                     (sprite[1] * 32) +
                     "px";
-
             }
 
             function resetIdleAnimation() {
 
-                idleAnimation = null;
-                idleAnimationFrame = 0;
+                idleAnimation =
+                    null;
 
+                idleAnimationFrame =
+                    0;
             }
 
             function idle() {
@@ -2203,15 +2339,15 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     idleAnimation === null
                 ) {
 
-                    const
-                        availableIdleAnimations = [
-                            "sleeping",
-                            "scratchSelf"
-                        ];
+                    const availableIdleAnimations = [
+                        "sleeping",
+                        "scratchSelf"
+                    ];
 
                     if (
                         nekoPosX < 32
                     ) {
+
                         availableIdleAnimations.push(
                             "scratchWallW"
                         );
@@ -2220,6 +2356,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     if (
                         nekoPosY < 32
                     ) {
+
                         availableIdleAnimations.push(
                             "scratchWallN"
                         );
@@ -2229,6 +2366,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         nekoPosX >
                         window.innerWidth - 32
                     ) {
+
                         availableIdleAnimations.push(
                             "scratchWallE"
                         );
@@ -2238,6 +2376,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         nekoPosY >
                         window.innerHeight - 32
                     ) {
+
                         availableIdleAnimations.push(
                             "scratchWallS"
                         );
@@ -2250,7 +2389,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                 availableIdleAnimations.length
                             )
                         ];
-
                 }
 
                 switch (idleAnimation) {
@@ -2267,22 +2405,22 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             );
 
                             break;
-
                         }
 
                         setSprite(
                             "sleeping",
                             Math.floor(
-                                idleAnimationFrame / 4
+                                idleAnimationFrame /
+                                4
                             )
                         );
 
                         if (
-                            idleAnimationFrame > 192
+                            idleAnimationFrame >
+                            192
                         ) {
 
                             resetIdleAnimation();
-
                         }
 
                         break;
@@ -2299,11 +2437,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         );
 
                         if (
-                            idleAnimationFrame > 9
+                            idleAnimationFrame >
+                            9
                         ) {
 
                             resetIdleAnimation();
-
                         }
 
                         break;
@@ -2316,11 +2454,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         );
 
                         return;
-
                 }
 
                 idleAnimationFrame += 1;
-
             }
 
             function frame() {
@@ -2349,13 +2485,17 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     idle();
 
                     return;
-
                 }
 
-                idleAnimation = null;
-                idleAnimationFrame = 0;
+                idleAnimation =
+                    null;
 
-                if (idleTime > 1) {
+                idleAnimationFrame =
+                    0;
+
+                if (
+                    idleTime > 1
+                ) {
 
                     setSprite(
                         "alert",
@@ -2371,7 +2511,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     idleTime -= 1;
 
                     return;
-
                 }
 
                 let direction = "";
@@ -2434,7 +2573,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 nekoEl.style.top =
                     (nekoPosY - 16) +
                     "px";
-
             }
 
             if (
@@ -2445,9 +2583,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 document.addEventListener(
                     "DOMContentLoaded",
                     init,
-                    {
-                        once: true
-                    }
+                    { once: true }
                 );
 
             } else {
@@ -2460,7 +2596,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
 
         /* =========================================================
-           4. Y2K PIXEL DUST CURSOR TRAIL
+           5. Y2K PIXEL DUST CURSOR TRAIL
            ========================================================= */
 
         (function () {
@@ -2499,8 +2635,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             canvas.style.position =
                 "fixed";
 
-            canvas.style.left = "0";
-            canvas.style.top = "0";
+            canvas.style.left =
+                "0";
+
+            canvas.style.top =
+                "0";
 
             canvas.style.width =
                 "100vw";
@@ -2554,7 +2693,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                 ctx.imageSmoothingEnabled =
                     false;
-
             }
 
             resizeCanvas();
@@ -2570,8 +2708,11 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             let mouseY =
                 window.innerHeight / 2;
 
-            let lastX = mouseX;
-            let lastY = mouseY;
+            let lastX =
+                mouseX;
+
+            let lastY =
+                mouseY;
 
             document.addEventListener(
                 "mousemove",
@@ -2588,12 +2729,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
             const particles = [];
 
-            function random(min, max) {
+            function random(
+                min,
+                max
+            ) {
 
                 return Math.random() *
                     (max - min) +
                     min;
-
             }
 
             function createParticle() {
@@ -2602,6 +2745,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     particles.length >=
                     SETTINGS.maxParticles
                 ) {
+
                     return;
                 }
 
@@ -2646,7 +2790,8 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     maxLife: 0,
 
-                    white: white,
+                    white:
+                        white,
 
                     tick: 0
 
@@ -2655,15 +2800,17 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 p.maxLife =
                     p.life;
 
-                particles.push(p);
-
+                particles.push(
+                    p
+                );
             }
 
             function drawPixel(
                 particle
             ) {
 
-                const p = particle;
+                const p =
+                    particle;
 
                 const alpha =
                     Math.max(
@@ -2692,10 +2839,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     ctx.strokeStyle =
                         "#fff";
-
                 }
 
-                ctx.lineWidth = 1;
+                ctx.lineWidth =
+                    1;
 
                 const x =
                     Math.round(
@@ -2714,7 +2861,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 const size =
                     p.size;
 
-                if (size <= 4) {
+                if (
+                    size <= 4
+                ) {
 
                     ctx.fillRect(
                         x,
@@ -2738,61 +2887,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         size - 1,
                         size - 1
                     );
-
                 }
 
                 ctx.restore();
-
-            }
-
-            function drawSpark(
-                x,
-                y,
-                white
-            ) {
-
-                ctx.save();
-
-                ctx.globalAlpha =
-                    random(
-                        0.35,
-                        0.9
-                    );
-
-                ctx.fillStyle =
-                    white
-                        ? "#fff"
-                        : "#000";
-
-                ctx.strokeStyle =
-                    white
-                        ? "#000"
-                        : "#fff";
-
-                ctx.lineWidth = 1;
-
-                const size = 3;
-
-                ctx.fillRect(
-                    Math.round(x),
-                    Math.round(
-                        y - size
-                    ),
-                    1,
-                    size * 2 + 1
-                );
-
-                ctx.fillRect(
-                    Math.round(
-                        x - size
-                    ),
-                    Math.round(y),
-                    size * 2 + 1,
-                    1
-                );
-
-                ctx.restore();
-
             }
 
             let spawnCounter = 0;
@@ -2800,10 +2897,12 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
             function spawnParticles() {
 
                 const dx =
-                    mouseX - lastX;
+                    mouseX -
+                    lastX;
 
                 const dy =
-                    mouseY - lastY;
+                    mouseY -
+                    lastY;
 
                 const distance =
                     Math.sqrt(
@@ -2811,7 +2910,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         dy * dy
                     );
 
-                if (distance > 0.5) {
+                if (
+                    distance > 0.5
+                ) {
 
                     spawnCounter +=
                         SETTINGS.spawnRate;
@@ -2823,14 +2924,14 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         createParticle();
 
                         spawnCounter--;
-
                     }
-
                 }
 
-                lastX = mouseX;
-                lastY = mouseY;
+                lastX =
+                    mouseX;
 
+                lastY =
+                    mouseY;
             }
 
             function updateParticle(
@@ -2844,6 +2945,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 if (
                     particle.life <= 0
                 ) {
+
                     return false;
                 }
 
@@ -2855,7 +2957,8 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     SETTINGS.choppyMovement
                 ) {
 
-                    particle.tick = 0;
+                    particle.tick =
+                        0;
 
                     particle.x +=
                         particle.vx;
@@ -2865,11 +2968,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                     particle.vy +=
                         SETTINGS.gravity;
-
                 }
 
                 return true;
-
             }
 
             let previousTime =
@@ -2882,7 +2983,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                 const delta =
                     Math.min(
                         currentTime -
-                            previousTime,
+                        previousTime,
                         40
                     );
 
@@ -2921,19 +3022,16 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         );
 
                         continue;
-
                     }
 
                     drawPixel(
                         particle
                     );
-
                 }
 
                 requestAnimationFrame(
                     animate
                 );
-
             }
 
             requestAnimationFrame(
@@ -2944,7 +3042,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
 
         /* =========================================================
-           5. Y2K MP3 PLAYER
+           6. Y2K MP3 PLAYER
            ========================================================= */
 
         (function () {
@@ -2984,7 +3082,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "duration"
                 );
 
-            if (!audio) return;
+            if (!audio) {
+                return;
+            }
 
             function formatTime(
                 seconds
@@ -2995,6 +3095,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         seconds
                     )
                 ) {
+
                     return "0:00";
                 }
 
@@ -3018,7 +3119,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     ":" +
                     secondsPart
                 );
-
             }
 
             audio.addEventListener(
@@ -3031,9 +3131,7 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             formatTime(
                                 audio.duration
                             );
-
                     }
-
                 }
             );
 
@@ -3043,7 +3141,9 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "click",
                     function () {
 
-                        if (audio.paused) {
+                        if (
+                            audio.paused
+                        ) {
 
                             audio
                                 .play()
@@ -3052,7 +3152,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                                         playButton.textContent =
                                             "❚❚";
-
                                     }
                                 )
                                 .catch(
@@ -3062,7 +3161,6 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                                             "Could not play MP3:",
                                             error
                                         );
-
                                     }
                                 );
 
@@ -3072,19 +3170,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                             playButton.textContent =
                                 "▶";
-
                         }
-
                     }
                 );
-
             }
 
             audio.addEventListener(
                 "timeupdate",
                 function () {
 
-                    if (!audio.duration) {
+                    if (
+                        !audio.duration
+                    ) {
+
                         return;
                     }
 
@@ -3095,22 +3193,23 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         ) *
                         100;
 
-                    if (progressFill) {
+                    if (
+                        progressFill
+                    ) {
 
                         progressFill.style.width =
                             percent + "%";
-
                     }
 
-                    if (currentTime) {
+                    if (
+                        currentTime
+                    ) {
 
                         currentTime.textContent =
                             formatTime(
                                 audio.currentTime
                             );
-
                     }
-
                 }
             );
 
@@ -3120,7 +3219,10 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                     "click",
                     function (event) {
 
-                        if (!audio.duration) {
+                        if (
+                            !audio.duration
+                        ) {
+
                             return;
                         }
 
@@ -3144,10 +3246,8 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                         audio.currentTime =
                             percentage *
                             audio.duration;
-
                     }
                 );
-
             }
 
             if (muteButton) {
@@ -3163,10 +3263,8 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
                             audio.muted
                                 ? "🔇"
                                 : "🔊";
-
                     }
                 );
-
             }
 
             audio.addEventListener(
@@ -3177,23 +3275,19 @@ $$$$ $$ $$$ $$$$$$$$ $$$$
 
                         playButton.textContent =
                             "▶";
-
                     }
 
                     if (progressFill) {
 
                         progressFill.style.width =
                             "0%";
-
                     }
 
                     if (currentTime) {
 
                         currentTime.textContent =
                             "0:00";
-
                     }
-
                 }
             );
 
