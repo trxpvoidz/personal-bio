@@ -1,1038 +1,1036 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png"
-    href="https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true">
-
-<title>𝔱𝔯𝔵𝔭˚₊‧⁺⋆♱</title>
-
-<!-- Discord / Open Graph embedding -->
-<meta property="og:title" content="Trxp˚₊‧⁺⋆♱">
-<meta property="og:description"
-    content="★ Designer / Developer / Creator — Welcome to my personal website.">
-<meta property="og:image"
-    content="https://github.com/trxpvoidz/personal-bio/blob/main/6259b833755c23a4dfcde6f34369599e.png?raw=true">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#000000">
-
-<style>
-    /* =========================================================
-       Y2K MONOCHROME WEB STYLE
-       MS GOTHIC / BLACK + WHITE / PIXEL CURSOR
-       ========================================================== */
-
-    @font-face {
-        font-family: "MSGothic";
-        src: url("https://github.com/07th-mod/ui-editing-scripts/raw/refs/heads/master/assets/fonts/MS-Gothic.ttf")
-            format("truetype");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100vh;
-        padding: 20px;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #000;
-        background-color: #fff;
-        background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/Untitled440_20260829025922.png?raw=true");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        overflow-x: hidden;
-
-        -webkit-font-smoothing: none;
-        -moz-osx-font-smoothing: grayscale;
-        font-smooth: never;
-        text-rendering: optimizeSpeed;
-
-        /* NEW CUSTOM CURSOR */
-        cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, auto;
-    }
-
-    a,
-    button,
-    input,
-    textarea,
-    select,
-    summary,
-    [role="button"],
-    [onclick],
-    [data-tooltip] {
-        cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, pointer;
-    }
-
-    a {
-        color: #3a3a3a;
-        text-decoration: underline;
-        font-family: "MSGothic", "MS Gothic", monospace;
-    }
-
-    a:hover {
-        color: #fff;
-        background: #000;
-        text-decoration: none;
-    }
-
-    ::selection {
-        color: #fff;
-        background: #000;
-    }
-
-    ::-moz-selection {
-        color: #fff;
-        background: #000;
-    }
-
-    .container {
-        width: min(900px, 100%);
-        margin: 30px auto;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.96);
-        border: 2px solid #000;
-        box-shadow: 6px 6px 0 #000;
-        position: relative;
-        image-rendering: pixelated;
-    }
-
-    .header {
-        margin-bottom: 25px;
-        padding: 12px 15px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 20px;
-        font-weight: normal;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-weight: normal;
-        color: #000;
-    }
-
-    h1 {
-        font-size: 26px;
-        padding-bottom: 6px;
-        border-bottom: 3px double #000;
-    }
-
-    h2 {
-        font-size: 21px;
-        padding-bottom: 5px;
-        border-bottom: 2px solid #000;
-    }
-
-    h3 {
-        font-size: 17px;
-    }
-
-    p {
-        font-family: "MSGothic", "MS Gothic", monospace;
-        color: #000;
-    }
-
-    .box {
-        margin: 18px 0;
-        padding: 12px;
-        color: #000;
-        background: #fff;
-        border: 2px solid #000;
-        box-shadow: 3px 3px 0 #000;
-    }
-
-    .black-box {
-        margin: 18px 0;
-        padding: 15px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
-    }
-
-    .y2k-strip {
-        margin: 15px 0;
-        padding: 5px 8px;
-        color: #fff;
-        background: #000;
-        border-top: 2px solid #000;
-        border-bottom: 2px solid #000;
-        white-space: nowrap;
-        overflow: hidden;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 12px;
-    }
-
-    .retro-line {
-        height: 5px;
-        margin: 10px 0;
-        background: repeating-linear-gradient(
-            90deg,
-            #000 0,
-            #000 8px,
-            #fff 8px,
-            #fff 12px
-        );
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-    }
-
-    hr {
-        height: 0;
-        margin: 20px 0;
-        border: 0;
-        border-top: 2px solid #000;
-    }
-
-    button,
-    .button {
-        display: inline-block;
-        padding: 6px 14px;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 13px;
-        color: #000;
-        background: #fff;
-        border: 2px solid #000;
-        box-shadow: 3px 3px 0 #000;
-        cursor: pointer;
-        transition:
-            background 0.05s,
-            color 0.05s,
-            transform 0.05s,
-            box-shadow 0.05s;
-    }
-
-    button:hover,
-    .button:hover {
-        color: #fff;
-        background: #000;
-    }
-
-    button:active,
-    .button:active {
-        transform: translate(3px, 3px);
-        box-shadow: 0 0 0 #000;
-    }
-
-    input,
-    textarea,
-    select {
-        width: 100%;
-        padding: 7px;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 13px;
-        color: #000;
-        background: #fff;
-        border: 2px solid #000;
-        outline: none;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-        color: #fff;
-        background: #000;
-        box-shadow: 3px 3px 0 #777;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: "MSGothic", "MS Gothic", monospace;
-    }
-
-    th,
-    td {
-        padding: 7px;
-        border: 1px solid #000;
-        text-align: left;
-    }
-
-    th {
-        color: #fff;
-        background: #000;
-        font-weight: normal;
-    }
-
-    tr:nth-child(even) {
-        background: #eee;
-    }
-
-    tr:hover {
-        color: #fff;
-        background: #000;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        border: 2px solid #000;
-        image-rendering: pixelated;
-    }
-
-    .pixel {
-        image-rendering: pixelated;
-        border: 2px solid #000;
-        box-shadow: 4px 4px 0 #000;
-    }
-
-    .badge {
-        display: inline-block;
-        padding: 2px 7px;
-        color: #fff;
-        background: #000;
-        border: 1px solid #000;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 11px;
-    }
-
-    .status {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-        padding: 6px 10px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 11px;
-    }
-
-    code,
-    pre {
-        font-family: "MSGothic", "MS Gothic", monospace;
-        color: #fff;
-        background: #000;
-        border: 1px solid #000;
-    }
-
-    code {
-        padding: 2px 4px;
-    }
-
-    pre {
-        padding: 12px;
-        overflow-x: auto;
-    }
-
-    .y2k-white {
-        margin: 18px 0;
-        padding: 12px;
-        color: #000;
-        background: #fff;
-        border: 2px solid #000;
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.5;
-        box-shadow: 3px 3px 0 #000;
-    }
-
-    /* =========================================================
-       TOOLTIP
-       ========================================================== */
-
-    #s-m-t-tooltip,
-    .y2k-tooltip {
-        position: fixed;
-        z-index: 2147483646;
-        width: max-content;
-        max-width: 280px;
-        padding: 8px 10px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        outline: 1px solid #fff;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 12px;
-        font-weight: normal;
-        line-height: 1.4;
-        letter-spacing: 0.2px;
-        text-align: left;
-
-        box-shadow:
-            4px 4px 0 #fff,
-            6px 6px 0 #000;
-
-        pointer-events: none;
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-break: normal;
-        opacity: 1;
-    }
-
-    #s-m-t-tooltip::before,
-    .y2k-tooltip::before {
-        content: "INFO";
-        display: block;
-
-        margin: -8px -10px 7px -10px;
-        padding: 3px 7px 3px 24px;
-
-        color: #000;
-        background-color: #fff;
-        background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true");
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 16px 16px;
-
-        border-bottom: 2px solid #fff;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 10px;
-        font-weight: normal;
-        line-height: 1.2;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    #s-m-t-tooltip,
-    #s-m-t-tooltip *,
-    .y2k-tooltip,
-    .y2k-tooltip * {
-        font-family: "MSGothic", "MS Gothic", monospace;
-    }
-
-    #s-m-t-tooltip a,
-    .y2k-tooltip a {
-        color: #fff;
-        background: transparent;
-        text-decoration: underline;
-    }
-
-    #s-m-t-tooltip a:hover,
-    .y2k-tooltip a:hover {
-        color: #000;
-        background: #fff;
-        text-decoration: none;
-    }
-
-    #s-m-t-tooltip::after,
-    .y2k-tooltip::after {
-        content: "";
-        display: block;
-        height: 2px;
-        margin: 7px -10px -8px -10px;
-
-        background: repeating-linear-gradient(
-            90deg,
-            #fff 0,
-            #fff 5px,
-            #000 5px,
-            #000 8px
-        );
-    }
-
-    #s-m-t-tooltip {
-        cursor: default !important;
-    }
-
-    /* =========================================================
-       CRT SCANLINES
-       ========================================================== */
-
-    body::after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: 9998;
-        pointer-events: none;
-
-        background: repeating-linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.025) 0px,
-            rgba(0, 0, 0, 0.025) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-    }
-
-    footer {
-        width: min(900px, 100%);
-        margin: 30px auto 10px;
-        padding: 8px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        text-align: center;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 11px;
-    }
-
-    ::-webkit-scrollbar {
-        width: 14px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #fff;
-        border-left: 2px solid #000;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #000;
-        border: 2px solid #fff;
-        box-shadow: inset 0 0 0 1px #000;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #333;
-    }
-
-    /* =========================================================
-       PROFILE
-       ========================================================== */
-
-    .profile {
-        display: flex;
-        gap: 18px;
-        margin: 20px 0;
-        padding: 15px;
-        background: #fff;
-        border: 2px solid #000;
-        box-shadow: 4px 4px 0 #000;
-    }
-
-    .profile-avatar {
-        flex: 0 0 120px;
-    }
-
-    .profile-avatar img {
-        display: block;
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border: 2px solid #000;
-        image-rendering: pixelated;
-    }
-
-    .profile-info {
-        flex: 1;
-    }
-
-    .profile-name {
-        font-size: 25px;
-        border-bottom: 2px solid #000;
-        padding-bottom: 4px;
-        margin-bottom: 4px;
-    }
-
-    .profile-tag {
-        font-size: 12px;
-    }
-
-    .profile-status {
-        display: inline-block;
-        margin-top: 5px;
-        padding: 3px 8px;
-        color: #fff;
-        background: #000;
-        font-size: 11px;
-        border: 1px solid #000;
-    }
-
-    /* =========================================================
-       SOCIAL LINKS
-       ========================================================== */
-
-    .social-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-    }
-
-    .social-links a {
-        padding: 4px 7px;
-        border: 1px solid #000;
-        text-decoration: none;
-    }
-
-    .social-links a:hover {
-        color: #fff;
-        background: #000;
-    }
-
-    /* =========================================================
-       TERMINAL
-       ========================================================== */
-
-    .terminal {
-        margin: 18px 0;
-        padding: 15px;
-        color: #fff;
-        background: #000;
-        border: 2px solid #000;
-        box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 12px;
-        line-height: 1.6;
-        overflow-x: auto;
-    }
-
-    /* =========================================================
-       GALLERY
-       ========================================================== */
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 10px;
-        margin: 18px 0;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: 110px;
-        object-fit: cover;
-        cursor: pointer;
-        image-rendering: pixelated;
-    }
-
-    .gallery img:hover {
-        filter: contrast(1.2);
-    }
-
-    /* =========================================================
-       KEYCHAINS
-       
-       IMPORTANT:
-       The wrapper keeps its original position + rotation.
-       The IMAGE swings gently inside that wrapper.
-       
-       This prevents the "crazy shaking" problem while keeping
-       the original hanging angle.
-       ========================================================== */
-
-    .keychain-wrapper {
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        z-index: 5;
-
-        pointer-events: auto;
-        display: block;
-    }
-
-    .keychain-top-left {
-        top: -35px;
-        left: -35px;
-        transform: rotate(-12deg);
-    }
-
-    .keychain-top-right {
-        top: -30px;
-        right: -30px;
-        transform: rotate(10deg);
-    }
-
-    .keychain-bottom-left {
-        bottom: -30px;
-        left: -35px;
-        transform: rotate(8deg);
-    }
-
-    .keychain-bottom-right {
-        bottom: -35px;
-        right: -30px;
-        transform: rotate(-10deg);
-    }
-
-    .keychain-mid-left {
-        top: 50%;
-        left: -40px;
-        transform: translateY(-50%) rotate(-15deg);
-    }
-
-    .keychain-mid-right {
-        top: 50%;
-        right: -40px;
-        transform: translateY(-50%) rotate(15deg);
-    }
-
-    .corner-object {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-
-        border: 0 !important;
-        box-shadow: none !important;
-
-        image-rendering: pixelated;
-
-        /*
-         * The image itself moves, while the wrapper keeps
-         * the original rotation and position.
-         */
-        transform-origin: center top;
-
-        transition: transform 0.15s ease;
-    }
-
-    /*
-     * GENTLE SWING
-     *
-     * This is deliberately small.
-     * It swings back and forth instead of violently shaking.
-     */
-    .keychain-wrapper:hover .corner-object {
-        animation: keychain-swing 0.65s ease-in-out infinite;
-    }
-
-    @keyframes keychain-swing {
-        0% {
-            transform: translate(0, 0) rotate(0deg);
+    <link rel="icon" type="image/png"
+        href="https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true">
+
+    <title>𝔱𝔯𝔵𝔭˚₊‧⁺⋆♱</title>
+
+    <!-- Discord / Open Graph embedding -->
+    <meta property="og:title" content="Trxp˚₊‧⁺⋆♱">
+    <meta property="og:description"
+        content="★ Designer / Developer / Creator — Welcome to my personal website.">
+    <meta property="og:image"
+        content="https://github.com/trxpvoidz/personal-bio/blob/main/6259b833755c23a4dfcde6f34369599e.png?raw=true">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#000000">
+
+    <style>
+        /* =========================================================
+           Y2K MONOCHROME WEB STYLE
+           MS GOTHIC / BLACK + WHITE / PIXEL CURSOR
+           ========================================================== */
+
+        @font-face {
+            font-family: "MSGothic";
+            src: url("https://github.com/07th-mod/ui-editing-scripts/raw/refs/heads/master/assets/fonts/MS-Gothic.ttf")
+                format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
         }
 
-        18% {
-            transform: translate(1px, 0) rotate(2.5deg);
+        * {
+            box-sizing: border-box;
         }
 
-        38% {
-            transform: translate(-1px, 1px) rotate(-2.5deg);
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
         }
-
-        58% {
-            transform: translate(1px, 0) rotate(2deg);
-        }
-
-        78% {
-            transform: translate(-0.5px, 0) rotate(-1.5deg);
-        }
-
-        100% {
-            transform: translate(0, 0) rotate(0deg);
-        }
-    }
-
-    /*
-     * Slightly different swing timing so the six charms don't
-     * all look perfectly synchronized.
-     */
-    .keychain-top-right:hover .corner-object {
-        animation-delay: -0.12s;
-    }
-
-    .keychain-bottom-left:hover .corner-object {
-        animation-delay: -0.21s;
-    }
-
-    .keychain-bottom-right:hover .corner-object {
-        animation-delay: -0.08s;
-    }
-
-    .keychain-mid-left:hover .corner-object {
-        animation-delay: -0.17s;
-    }
-
-    .keychain-mid-right:hover .corner-object {
-        animation-delay: -0.27s;
-    }
-
-    /* =========================================================
-       ASCII ART
-       ========================================================== */
-
-    .ascii-art {
-        margin: 12px 0;
-        padding: 10px;
-        color: #fff;
-        background: #000;
-        border: 1px solid #fff;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 12px;
-        line-height: 1;
-        white-space: pre;
-        overflow-x: auto;
-        image-rendering: pixelated;
-
-        text-shadow: 1px 0 #fff;
-    }
-
-    /* =========================================================
-       MUSIC PLAYER
-       ========================================================== */
-
-    .now-playing {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .album-art {
-        flex: 0 0 100px;
-        width: 100px;
-        height: 100px;
-        border: 2px solid #fff;
-        background: #000;
-        overflow: hidden;
-        box-shadow: 3px 3px 0 #fff;
-    }
-
-    .album-art img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 0;
-        image-rendering: pixelated;
-    }
-
-    .music-player {
-        flex: 1;
-        min-width: 0;
-        color: #fff;
-        font-family: "MSGothic", "MS Gothic", monospace;
-    }
-
-    .music-controls {
-        display: flex;
-        gap: 6px;
-        margin-bottom: 10px;
-    }
-
-    .music-controls button {
-        width: 32px;
-        height: 28px;
-        padding: 0;
-
-        color: #000;
-        background: #fff;
-
-        border: 2px solid #fff;
-        box-shadow: none;
-
-        font-family: "MSGothic", "MS Gothic", monospace;
-        font-size: 12px;
-        cursor: pointer;
-    }
-
-    .music-controls button:hover {
-        color: #fff;
-        background: #000;
-        border-color: #fff;
-    }
-
-    .music-controls button:active {
-        transform: translate(2px, 2px);
-    }
-
-    .music-progress-container {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        width: 100%;
-    }
-
-    .music-time {
-        flex: 0 0 auto;
-        min-width: 32px;
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .music-progress {
-        position: relative;
-        flex: 1;
-        height: 14px;
-        background: #000;
-        border: 2px solid #fff;
-        cursor: pointer;
-        overflow: hidden;
-    }
-
-    .music-progress-fill {
-        width: 0%;
-        height: 100%;
-
-        background: repeating-linear-gradient(
-            90deg,
-            #fff 0,
-            #fff 8px,
-            #000 8px,
-            #000 11px
-        );
-
-        border-right: 2px solid #fff;
-        transition: width 0.05s linear;
-    }
-
-    .music-progress:hover {
-        box-shadow: 2px 2px 0 #fff;
-    }
-
-    /* =========================================================
-       STAMPS
-       ========================================================== */
-
-    .stamps {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        align-items: flex-start;
-    }
-
-    .stamps img {
-        width: 99px;
-        height: 56px;
-        object-fit: cover;
-        image-rendering: pixelated;
-        display: block;
-    }
-
-    /* =========================================================
-       MOBILE
-       ========================================================== */
-
-    @media (max-width: 600px) {
 
         body {
-            padding: 10px;
-            font-size: 13px;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #000;
+            background-color: #fff;
+            background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/Untitled440_20260829025922.png?raw=true");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow-x: hidden;
+
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+            font-smooth: never;
+            text-rendering: optimizeSpeed;
+
+            /* CUSTOM PIXEL CURSOR */
+            cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, auto;
+        }
+
+        a,
+        button,
+        input,
+        textarea,
+        select,
+        summary,
+        [role="button"],
+        [onclick],
+        [data-tooltip] {
+            cursor: url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true") 0 0, pointer;
+        }
+
+        a {
+            color: #3a3a3a;
+            text-decoration: underline;
+            font-family: "MSGothic", "MS Gothic", monospace;
+        }
+
+        a:hover {
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+        }
+
+        ::selection {
+            color: #fff;
+            background: #000;
+        }
+
+        ::-moz-selection {
+            color: #fff;
+            background: #000;
         }
 
         .container {
-            margin: 10px auto;
-            padding: 12px;
-            box-shadow: 4px 4px 0 #000;
+            width: min(900px, 100%);
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.96);
+            border: 2px solid #000;
+            box-shadow: 6px 6px 0 #000;
+            position: relative;
+            image-rendering: pixelated;
         }
 
         .header {
-            font-size: 16px;
+            margin-bottom: 25px;
+            padding: 12px 15px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-weight: normal;
+            color: #000;
         }
 
         h1 {
-            font-size: 21px;
+            font-size: 26px;
+            padding-bottom: 6px;
+            border-bottom: 3px double #000;
         }
 
         h2 {
-            font-size: 18px;
+            font-size: 21px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #000;
+        }
+
+        h3 {
+            font-size: 17px;
+        }
+
+        p {
+            font-family: "MSGothic", "MS Gothic", monospace;
+            color: #000;
+        }
+
+        .box {
+            margin: 18px 0;
+            padding: 12px;
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0 #000;
+        }
+
+        .black-box {
+            margin: 18px 0;
+            padding: 15px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
+        }
+
+        .y2k-strip {
+            margin: 15px 0;
+            padding: 5px 8px;
+            color: #fff;
+            background: #000;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 12px;
+        }
+
+        .retro-line {
+            height: 5px;
+            margin: 10px 0;
+            background: repeating-linear-gradient(
+                90deg,
+                #000 0,
+                #000 8px,
+                #fff 8px,
+                #fff 12px
+            );
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        hr {
+            height: 0;
+            margin: 20px 0;
+            border: 0;
+            border-top: 2px solid #000;
+        }
+
+        button,
+        .button {
+            display: inline-block;
+            padding: 6px 14px;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 13px;
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0 #000;
+            cursor: pointer;
+            transition:
+                background 0.05s,
+                color 0.05s,
+                transform 0.05s,
+                box-shadow 0.05s;
+        }
+
+        button:hover,
+        .button:hover {
+            color: #fff;
+            background: #000;
+        }
+
+        button:active,
+        .button:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0 0 0 #000;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 7px;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 13px;
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            color: #fff;
+            background: #000;
+            box-shadow: 3px 3px 0 #777;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: "MSGothic", "MS Gothic", monospace;
+        }
+
+        th,
+        td {
+            padding: 7px;
+            border: 1px solid #000;
+            text-align: left;
+        }
+
+        th {
+            color: #fff;
+            background: #000;
+            font-weight: normal;
+        }
+
+        tr:nth-child(even) {
+            background: #eee;
+        }
+
+        tr:hover {
+            color: #fff;
+            background: #000;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #000;
+            image-rendering: pixelated;
+        }
+
+        .pixel {
+            image-rendering: pixelated;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 7px;
+            color: #fff;
+            background: #000;
+            border: 1px solid #000;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 11px;
         }
 
         .status {
-            flex-direction: column;
-            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 6px 10px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 11px;
         }
+
+        code,
+        pre {
+            font-family: "MSGothic", "MS Gothic", monospace;
+            color: #fff;
+            background: #000;
+            border: 1px solid #000;
+        }
+
+        code {
+            padding: 2px 4px;
+        }
+
+        pre {
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        .y2k-white {
+            margin: 18px 0;
+            padding: 12px;
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.5;
+            box-shadow: 3px 3px 0 #000;
+        }
+
+        /* =========================================================
+           TOOLTIP
+           ========================================================== */
 
         #s-m-t-tooltip,
         .y2k-tooltip {
-            max-width: 220px;
-            font-size: 11px;
+            position: fixed;
+            z-index: 2147483646;
+            width: max-content;
+            max-width: 280px;
+            padding: 8px 10px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            outline: 1px solid #fff;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.4;
+            letter-spacing: 0.2px;
+            text-align: left;
+
             box-shadow:
-                3px 3px 0 #fff,
-                5px 5px 0 #000;
+                4px 4px 0 #fff,
+                6px 6px 0 #000;
+
+            pointer-events: none;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-break: normal;
+            opacity: 1;
         }
 
         #s-m-t-tooltip::before,
         .y2k-tooltip::before {
-            font-size: 9px;
-            background-size: 12px 12px;
-            padding-left: 20px;
+            content: "INFO";
+            display: block;
+
+            margin: -8px -10px 7px -10px;
+            padding: 3px 7px 3px 24px;
+
+            color: #000;
+            background-color: #fff;
+            background-image: url("https://github.com/trxpvoidz/personal-bio/blob/main/crosss.png?raw=true");
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 16px 16px;
+
+            border-bottom: 2px solid #fff;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
+        #s-m-t-tooltip,
+        #s-m-t-tooltip *,
+        .y2k-tooltip,
+        .y2k-tooltip * {
+            font-family: "MSGothic", "MS Gothic", monospace;
+        }
+
+        #s-m-t-tooltip a,
+        .y2k-tooltip a {
+            color: #fff;
+            background: transparent;
+            text-decoration: underline;
+        }
+
+        #s-m-t-tooltip a:hover,
+        .y2k-tooltip a:hover {
+            color: #000;
+            background: #fff;
+            text-decoration: none;
+        }
+
+        #s-m-t-tooltip::after,
+        .y2k-tooltip::after {
+            content: "";
+            display: block;
+            height: 2px;
+            margin: 7px -10px -8px -10px;
+
+            background: repeating-linear-gradient(
+                90deg,
+                #fff 0,
+                #fff 5px,
+                #000 5px,
+                #000 8px
+            );
+        }
+
+        #s-m-t-tooltip {
+            cursor: default !important;
+        }
+
+        /* =========================================================
+           CRT SCANLINES
+           ========================================================== */
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            pointer-events: none;
+
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.025) 0px,
+                rgba(0, 0, 0, 0.025) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+        }
+
+        footer {
+            width: min(900px, 100%);
+            margin: 30px auto 10px;
+            padding: 8px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            text-align: center;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 11px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            border-left: 2px solid #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border: 2px solid #fff;
+            box-shadow: inset 0 0 0 1px #000;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333;
+        }
+
+        /* =========================================================
+           PROFILE
+           ========================================================== */
+
         .profile {
-            flex-direction: column;
+            display: flex;
+            gap: 18px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
         }
 
         .profile-avatar {
-            flex: none;
+            flex: 0 0 120px;
         }
+
+        .profile-avatar img {
+            display: block;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 2px solid #000;
+            image-rendering: pixelated;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 25px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 4px;
+            margin-bottom: 4px;
+        }
+
+        .profile-tag {
+            font-size: 12px;
+        }
+
+        .profile-status {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 3px 8px;
+            color: #fff;
+            background: #000;
+            font-size: 11px;
+            border: 1px solid #000;
+        }
+
+        /* =========================================================
+           SOCIAL LINKS
+           ========================================================== */
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            padding: 4px 7px;
+            border: 1px solid #000;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            background: #000;
+        }
+
+        /* =========================================================
+           TERMINAL
+           ========================================================== */
+
+        .terminal {
+            margin: 18px 0;
+            padding: 15px;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #fff, 6px 6px 0 #000;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        /* =========================================================
+           GALLERY
+           ========================================================== */
 
         .gallery {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            margin: 18px 0;
         }
 
+        .gallery img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            cursor: pointer;
+            image-rendering: pixelated;
+        }
+
+        .gallery img:hover {
+            filter: contrast(1.2);
+        }
+
+        /* =========================================================
+           KEYCHAINS
+           
+           The wrapper keeps the original position + rotation.
+           The image swings inside the wrapper.
+           
+           This is what prevents the crazy shaking and keeps
+           the charm hanging at its original angle.
+           ========================================================== */
+
         .keychain-wrapper {
-            width: 48px;
-            height: 48px;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            z-index: 5;
+
+            pointer-events: auto;
+            display: block;
         }
 
         .keychain-top-left {
-            left: -20px;
-            top: -25px;
+            top: -35px;
+            left: -35px;
+            transform: rotate(-12deg);
         }
 
         .keychain-top-right {
-            right: -20px;
-            top: -25px;
+            top: -30px;
+            right: -30px;
+            transform: rotate(10deg);
         }
 
         .keychain-bottom-left {
-            left: -20px;
-            bottom: -25px;
+            bottom: -30px;
+            left: -35px;
+            transform: rotate(8deg);
         }
 
         .keychain-bottom-right {
-            right: -20px;
-            bottom: -25px;
+            bottom: -35px;
+            right: -30px;
+            transform: rotate(-10deg);
         }
 
         .keychain-mid-left {
-            left: -25px;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%) rotate(-15deg);
         }
 
         .keychain-mid-right {
-            right: -25px;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%) rotate(15deg);
         }
 
+        .corner-object {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            border: 0 !important;
+            box-shadow: none !important;
+
+            image-rendering: pixelated;
+
+            /*
+             * The image moves.
+             * The wrapper keeps its original rotation.
+             */
+            transform-origin: center top;
+
+            transition: transform 0.15s ease;
+        }
+
+        /*
+         * GENTLE HANGING SWING
+         *
+         * Small movement.
+         * No crazy shaking.
+         * The original wrapper rotation remains untouched.
+         */
+        .keychain-wrapper:hover .corner-object {
+            animation: keychain-swing 0.65s ease-in-out infinite;
+        }
+
+        @keyframes keychain-swing {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            18% {
+                transform: translate(1px, 0) rotate(2.5deg);
+            }
+
+            38% {
+                transform: translate(-1px, 1px) rotate(-2.5deg);
+            }
+
+            58% {
+                transform: translate(1px, 0) rotate(2deg);
+            }
+
+            78% {
+                transform: translate(-0.5px, 0) rotate(-1.5deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        /*
+         * Slightly different timing so all six don't swing
+         * at exactly the same time.
+         */
+        .keychain-top-right:hover .corner-object {
+            animation-delay: -0.12s;
+        }
+
+        .keychain-bottom-left:hover .corner-object {
+            animation-delay: -0.21s;
+        }
+
+        .keychain-bottom-right:hover .corner-object {
+            animation-delay: -0.08s;
+        }
+
+        .keychain-mid-left:hover .corner-object {
+            animation-delay: -0.17s;
+        }
+
+        .keychain-mid-right:hover .corner-object {
+            animation-delay: -0.27s;
+        }
+
+        /* =========================================================
+           ASCII ART
+           ========================================================== */
+
+        .ascii-art {
+            margin: 12px 0;
+            padding: 10px;
+            color: #fff;
+            background: #000;
+            border: 1px solid #fff;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 12px;
+            line-height: 1;
+            white-space: pre;
+            overflow-x: auto;
+            image-rendering: pixelated;
+
+            text-shadow: 1px 0 #fff;
+        }
+
+        /* =========================================================
+           MUSIC PLAYER
+           ========================================================== */
+
         .now-playing {
-            align-items: flex-start;
-            flex-direction: column;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
         }
 
         .album-art {
-            width: 80px;
-            height: 80px;
+            flex: 0 0 100px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #fff;
+            background: #000;
+            overflow: hidden;
+            box-shadow: 3px 3px 0 #fff;
+        }
+
+        .album-art img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 0;
+            image-rendering: pixelated;
         }
 
         .music-player {
+            flex: 1;
+            min-width: 0;
+            color: #fff;
+            font-family: "MSGothic", "MS Gothic", monospace;
+        }
+
+        .music-controls {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .music-controls button {
+            width: 32px;
+            height: 28px;
+            padding: 0;
+
+            color: #000;
+            background: #fff;
+
+            border: 2px solid #fff;
+            box-shadow: none;
+
+            font-family: "MSGothic", "MS Gothic", monospace;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .music-controls button:hover {
+            color: #fff;
+            background: #000;
+            border-color: #fff;
+        }
+
+        .music-controls button:active {
+            transform: translate(2px, 2px);
+        }
+
+        .music-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 7px;
             width: 100%;
         }
-    }
-</style>
 
+        .music-time {
+            flex: 0 0 auto;
+            min-width: 32px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .music-progress {
+            position: relative;
+            flex: 1;
+            height: 14px;
+            background: #000;
+            border: 2px solid #fff;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .music-progress-fill {
+            width: 0%;
+            height: 100%;
+
+            background: repeating-linear-gradient(
+                90deg,
+                #fff 0,
+                #fff 8px,
+                #000 8px,
+                #000 11px
+            );
+
+            border-right: 2px solid #fff;
+            transition: width 0.05s linear;
+        }
+
+        .music-progress:hover {
+            box-shadow: 2px 2px 0 #fff;
+        }
+
+        /* =========================================================
+           STAMPS
+           ========================================================== */
+
+        .stamps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: flex-start;
+        }
+
+        .stamps img {
+            width: 99px;
+            height: 56px;
+            object-fit: cover;
+            image-rendering: pixelated;
+            display: block;
+        }
+
+        /* =========================================================
+           MOBILE
+           ========================================================== */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            .container {
+                margin: 10px auto;
+                padding: 12px;
+                box-shadow: 4px 4px 0 #000;
+            }
+
+            .header {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 21px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .status {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #s-m-t-tooltip,
+            .y2k-tooltip {
+                max-width: 220px;
+                font-size: 11px;
+                box-shadow:
+                    3px 3px 0 #fff,
+                    5px 5px 0 #000;
+            }
+
+            #s-m-t-tooltip::before,
+            .y2k-tooltip::before {
+                font-size: 9px;
+                background-size: 12px 12px;
+                padding-left: 20px;
+            }
+
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile-avatar {
+                flex: none;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .keychain-wrapper {
+                width: 48px;
+                height: 48px;
+            }
+
+            .keychain-top-left {
+                left: -20px;
+                top: -25px;
+            }
+
+            .keychain-top-right {
+                right: -20px;
+                top: -25px;
+            }
+
+            .keychain-bottom-left {
+                left: -20px;
+                bottom: -25px;
+            }
+
+            .keychain-bottom-right {
+                right: -20px;
+                bottom: -25px;
+            }
+
+            .keychain-mid-left {
+                left: -25px;
+            }
+
+            .keychain-mid-right {
+                right: -25px;
+            }
+
+            .now-playing {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .album-art {
+                width: 80px;
+                height: 80px;
+            }
+
+            .music-player {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    
+
 <div class="container">
 
     <!-- =====================================================
-         KEYCHAINS (ALL 6 HAVE TOOLTIP INFO)
+         KEYCHAINS
+         ALL 6 HAVE TOOLTIP INFO
          ====================================================== -->
 
     <span
@@ -1089,7 +1087,6 @@
             alt="keychain 6">
     </span>
 
-
     <!-- HEADER -->
 
     <div class="header">
@@ -1099,7 +1096,6 @@
     <div class="y2k-strip">
         &gt;&gt;&gt;&gt;&gt; TrxpOS &lt;&lt;&lt;&lt;&lt;
     </div>
-
 
     <!-- PROFILE -->
 
@@ -1138,7 +1134,6 @@
         </div>
     </div>
 
-
     <!-- CONTACT / SOCIAL LINKS -->
 
     <div class="box">
@@ -1161,7 +1156,6 @@
 
         </div>
     </div>
-
 
     <!-- ABOUT ME -->
 
@@ -1193,15 +1187,12 @@
         <div class="retro-line"></div>
 
         <div class="stamps">
-
             <img
                 src="https://github.com/trxpvoidz/personal-bio/blob/main/Stamp.png?raw=true"
                 alt="">
-
         </div>
 
     </div>
-
 
     <!-- NOW PLAYING -->
 
@@ -1276,7 +1267,6 @@
 
     </div>
 
-
     <!-- TERMINAL -->
 
     <h2>TERMINAL</h2>
@@ -1307,25 +1297,26 @@
             C:\USERS\TRXP&gt; python info.py --ascii
         </div>
 
-        <pre class="ascii-art">
-      $ %$$
-      $ $$
-       $ $$
-      $ $$
-
-\($$ $$$ $$$$$$$$\)
-\($ $$$$$ $$$\) $
-$ $
-\( 
-          $\)
-$ $
-\(           $\)
-$ $ \(           $ $
-           $\)
-$ $ $
-$ $$ $
-$ %& $
-& $ </pre>
+        <!-- RESTORED ORIGINAL ASCII ART -->
+        <pre class="ascii-art">          $ %$$
+          $ $$
+           $ $$
+          $ $$
+$$$$ $$ $$$ $$$$$$$$ $$$$ 
+ $$$$ $ $$$$$ $$$ $$$$ $
+           $ $
+           $$  
+          $ $$
+           $ $
+            $$
+           $ $$
+          $ $ $$
+           $ $
+           $ $$
+          $ $ $
+          $ $$ $
+          $ %& $
+           & $</pre>
 
         <br>
 
@@ -1334,7 +1325,6 @@ $ %& $
         </div>
 
     </div>
-
 
     <!-- GALLERY -->
 
@@ -1366,7 +1356,6 @@ $ %& $
 
 </div>
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -1385,14 +1374,13 @@ $ %& $
 
 </footer>
 
-
 <script>
 
     /* =========================================================
        1. Y2K TOOLTIP
        
-       Uses event delegation so dynamically created/changed
-       elements with data-tooltip also work.
+       Event delegation means ALL six keychains work,
+       even though the images themselves are animated.
        ========================================================== */
 
     (function() {
@@ -1403,7 +1391,6 @@ $ %& $
 
         const OFFSET_X = 16;
         const OFFSET_Y = 18;
-
 
         function createTooltip() {
 
@@ -1420,9 +1407,7 @@ $ %& $
             tooltip.style.zIndex = "2147483646";
 
             document.body.appendChild(tooltip);
-
         }
-
 
         function positionTooltip(mouseX, mouseY) {
 
@@ -1444,7 +1429,6 @@ $ %& $
 
             const padding = 8;
 
-
             if (
                 x + rect.width >
                 window.innerWidth - padding
@@ -1454,9 +1438,7 @@ $ %& $
                     mouseX -
                     rect.width -
                     OFFSET_X;
-
             }
-
 
             if (
                 y + rect.height >
@@ -1467,28 +1449,22 @@ $ %& $
                     mouseY -
                     rect.height -
                     OFFSET_Y;
-
             }
-
 
             if (x < padding) {
                 x = padding;
             }
 
-
             if (y < padding) {
                 y = padding;
             }
-
 
             tooltip.style.left =
                 Math.round(x) + "px";
 
             tooltip.style.top =
                 Math.round(y) + "px";
-
         }
-
 
         function showTooltip(element, event) {
 
@@ -1502,32 +1478,30 @@ $ %& $
             createTooltip();
 
             tooltip.textContent = text;
-
             tooltip.style.display = "block";
 
             positionTooltip(
                 event.clientX,
                 event.clientY
             );
-
         }
-
 
         function hideTooltip() {
 
             if (!tooltip) return;
 
             tooltip.style.display = "none";
-
         }
-
 
         /*
          * EVENT DELEGATION
          *
-         * This is the important part for all 6 keychains.
-         * We listen on the document instead of relying on
-         * individual listeners that can miss elements.
+         * Instead of attaching six separate hover handlers,
+         * listen to the document and find whichever element
+         * currently has data-tooltip.
+         *
+         * This fixes the problem where only 2 keychains
+         * were showing their info tooltip.
          */
 
         document.addEventListener(
@@ -1540,12 +1514,14 @@ $ %& $
                 window.lastMouseY =
                     event.clientY;
 
+                const target =
+                    event.target;
 
                 const element =
-                    event.target.closest(
-                        "[data-tooltip]"
-                    );
-
+                    target &&
+                    target.closest
+                        ? target.closest("[data-tooltip]")
+                        : null;
 
                 if (
                     element &&
@@ -1560,12 +1536,10 @@ $ %& $
                 } else {
 
                     hideTooltip();
-
                 }
 
             }
         );
-
 
         document.addEventListener(
             "mouseleave",
@@ -1574,7 +1548,6 @@ $ %& $
             }
         );
 
-
         createTooltip();
 
     })();
@@ -1582,9 +1555,6 @@ $ %& $
 
     /* =========================================================
        2. CUSTOM PIXEL CURSOR
-       
-       Your new cursor:
-       70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png
        ========================================================== */
 
     (function() {
@@ -1593,7 +1563,6 @@ $ %& $
 
         const cursorURL =
             'url("https://github.com/trxpvoidz/personal-bio/blob/main/70429f65-22a1-4bc0-9b79-5d85c2fb9a50.png?raw=true")';
-
 
         function applyCursor() {
 
@@ -1606,16 +1575,13 @@ $ %& $
                 oldStyle.remove();
             }
 
-
             const style =
                 document.createElement("style");
 
             style.id =
                 "y2k-custom-cursor";
 
-
             style.textContent =
-
                 'html, body, body * {' +
                 'cursor: ' +
                 cursorURL +
@@ -1629,11 +1595,8 @@ $ %& $
                 ' 0 0, pointer !important;' +
                 '}';
 
-
             document.head.appendChild(style);
-
         }
-
 
         function initCursor() {
 
@@ -1645,13 +1608,10 @@ $ %& $
                 );
 
                 return;
-
             }
 
             applyCursor();
-
         }
-
 
         initCursor();
 
@@ -1673,10 +1633,8 @@ $ %& $
 
         if (mediaQuery.matches) return;
 
-
         const nekoEl =
             document.createElement("div");
-
 
         let nekoPosX = 32;
         let nekoPosY = 32;
@@ -1685,14 +1643,12 @@ $ %& $
         let mousePosY = 0;
 
         let frameCount = 0;
-
         let idleTime = 0;
 
         let idleAnimation = null;
         let idleAnimationFrame = 0;
 
         const nekoSpeed = 10;
-
 
         const spriteSets = {
 
@@ -1778,22 +1734,18 @@ $ %& $
                 [-1, 0],
                 [-1, -1]
             ]
-
         };
-
 
         function init() {
 
             const nekoFile =
                 "https://github.com/trxpvoidz/personal-bio/blob/main/oneko.gif?raw=true";
 
-
             nekoEl.id =
                 "oneko";
 
             nekoEl.ariaHidden =
                 "true";
-
 
             nekoEl.style.width =
                 "32px";
@@ -1824,11 +1776,9 @@ $ %& $
                 nekoFile +
                 '")';
 
-
             document.body.appendChild(
                 nekoEl
             );
-
 
             document.addEventListener(
                 "mousemove",
@@ -1839,20 +1789,15 @@ $ %& $
 
                     mousePosY =
                         event.clientY;
-
                 }
             );
-
 
             window.requestAnimationFrame(
                 onAnimationFrame
             );
-
         }
 
-
         let lastFrameTimestamp;
-
 
         function onAnimationFrame(timestamp) {
 
@@ -1860,12 +1805,10 @@ $ %& $
                 return;
             }
 
-
             if (!lastFrameTimestamp) {
                 lastFrameTimestamp =
                     timestamp;
             }
-
 
             if (
                 timestamp -
@@ -1877,16 +1820,12 @@ $ %& $
                     timestamp;
 
                 frame();
-
             }
-
 
             window.requestAnimationFrame(
                 onAnimationFrame
             );
-
         }
-
 
         function setSprite(name, frame) {
 
@@ -1894,22 +1833,18 @@ $ %& $
                 return;
             }
 
-
             const sprite =
                 spriteSets[name][
                     frame %
                     spriteSets[name].length
                 ];
 
-
             nekoEl.style.backgroundPosition =
                 (sprite[0] * 32) +
                 "px " +
                 (sprite[1] * 32) +
                 "px";
-
         }
-
 
         function resetIdleAnimation() {
 
@@ -1918,14 +1853,11 @@ $ %& $
 
             idleAnimationFrame =
                 0;
-
         }
-
 
         function idle() {
 
             idleTime += 1;
-
 
             if (
                 idleTime > 10 &&
@@ -1935,12 +1867,10 @@ $ %& $
                 idleAnimation === null
             ) {
 
-                const availableIdleAnimations =
-                    [
-                        "sleeping",
-                        "scratchSelf"
-                    ];
-
+                const availableIdleAnimations = [
+                    "sleeping",
+                    "scratchSelf"
+                ];
 
                 if (nekoPosX < 32) {
                     availableIdleAnimations.push(
@@ -1948,13 +1878,11 @@ $ %& $
                     );
                 }
 
-
                 if (nekoPosY < 32) {
                     availableIdleAnimations.push(
                         "scratchWallN"
                     );
                 }
-
 
                 if (
                     nekoPosX >
@@ -1964,9 +1892,7 @@ $ %& $
                     availableIdleAnimations.push(
                         "scratchWallE"
                     );
-
                 }
-
 
                 if (
                     nekoPosY >
@@ -1976,9 +1902,7 @@ $ %& $
                     availableIdleAnimations.push(
                         "scratchWallS"
                     );
-
                 }
-
 
                 idleAnimation =
                     availableIdleAnimations[
@@ -1987,9 +1911,7 @@ $ %& $
                             availableIdleAnimations.length
                         )
                     ];
-
             }
-
 
             switch (idleAnimation) {
 
@@ -2005,9 +1927,7 @@ $ %& $
                         );
 
                         break;
-
                     }
-
 
                     setSprite(
                         "sleeping",
@@ -2017,18 +1937,15 @@ $ %& $
                         )
                     );
 
-
                     if (
                         idleAnimationFrame >
                         192
                     ) {
 
                         resetIdleAnimation();
-
                     }
 
                     break;
-
 
                 case "scratchWallN":
                 case "scratchWallS":
@@ -2041,18 +1958,15 @@ $ %& $
                         idleAnimationFrame
                     );
 
-
                     if (
                         idleAnimationFrame >
                         9
                     ) {
 
                         resetIdleAnimation();
-
                     }
 
                     break;
-
 
                 default:
 
@@ -2062,19 +1976,14 @@ $ %& $
                     );
 
                     return;
-
             }
 
-
             idleAnimationFrame += 1;
-
         }
-
 
         function frame() {
 
             frameCount += 1;
-
 
             const diffX =
                 nekoPosX -
@@ -2084,13 +1993,11 @@ $ %& $
                 nekoPosY -
                 mousePosY;
 
-
             const distance =
                 Math.sqrt(
                     diffX ** 2 +
                     diffY ** 2
                 );
-
 
             if (
                 distance < nekoSpeed ||
@@ -2100,16 +2007,13 @@ $ %& $
                 idle();
 
                 return;
-
             }
-
 
             idleAnimation =
                 null;
 
             idleAnimationFrame =
                 0;
-
 
             if (idleTime > 1) {
 
@@ -2127,52 +2031,42 @@ $ %& $
                 idleTime -= 1;
 
                 return;
-
             }
 
-
             let direction = "";
-
 
             direction =
                 diffY / distance > 0.5
                     ? "N"
                     : "";
 
-
             direction +=
                 diffY / distance < -0.5
                     ? "S"
                     : "";
-
 
             direction +=
                 diffX / distance > 0.5
                     ? "W"
                     : "";
 
-
             direction +=
                 diffX / distance < -0.5
                     ? "E"
                     : "";
-
 
             setSprite(
                 direction,
                 frameCount
             );
 
-
             nekoPosX -=
                 (diffX / distance) *
                 nekoSpeed;
 
-
             nekoPosY -=
                 (diffY / distance) *
                 nekoSpeed;
-
 
             nekoPosX =
                 Math.min(
@@ -2183,7 +2077,6 @@ $ %& $
                     window.innerWidth - 16
                 );
 
-
             nekoPosY =
                 Math.min(
                     Math.max(
@@ -2193,18 +2086,14 @@ $ %& $
                     window.innerHeight - 16
                 );
 
-
             nekoEl.style.left =
                 (nekoPosX - 16) +
                 "px";
 
-
             nekoEl.style.top =
                 (nekoPosY - 16) +
                 "px";
-
         }
-
 
         if (
             document.readyState ===
@@ -2220,7 +2109,6 @@ $ %& $
         } else {
 
             init();
-
         }
 
     })();
@@ -2249,21 +2137,16 @@ $ %& $
             gravity: 0.015,
 
             pixelStep: 2,
-
             choppyMovement: 2
-
         };
-
 
         const canvas =
             document.createElement(
                 "canvas"
             );
 
-
         canvas.id =
             "y2k-pixel-dust";
-
 
         canvas.style.position =
             "fixed";
@@ -2289,19 +2172,15 @@ $ %& $
         canvas.style.imageRendering =
             "pixelated";
 
-
         document.body.appendChild(
             canvas
         );
 
-
         const ctx =
             canvas.getContext("2d");
 
-
         ctx.imageSmoothingEnabled =
             false;
-
 
         function resizeCanvas() {
 
@@ -2311,13 +2190,13 @@ $ %& $
                     2
                 );
 
-
             canvas.width =
-                window.innerWidth * dpr;
+                window.innerWidth *
+                dpr;
 
             canvas.height =
-                window.innerHeight * dpr;
-
+                window.innerHeight *
+                dpr;
 
             ctx.setTransform(
                 dpr,
@@ -2328,21 +2207,16 @@ $ %& $
                 0
             );
 
-
             ctx.imageSmoothingEnabled =
                 false;
-
         }
 
-
         resizeCanvas();
-
 
         window.addEventListener(
             "resize",
             resizeCanvas
         );
-
 
         let mouseX =
             window.innerWidth / 2;
@@ -2350,13 +2224,11 @@ $ %& $
         let mouseY =
             window.innerHeight / 2;
 
-
         let lastX =
             mouseX;
 
         let lastY =
             mouseY;
-
 
         document.addEventListener(
             "mousemove",
@@ -2367,13 +2239,10 @@ $ %& $
 
                 mouseY =
                     event.clientY;
-
             }
         );
 
-
         const particles = [];
-
 
         function random(min, max) {
 
@@ -2382,9 +2251,7 @@ $ %& $
                 (max - min) +
                 min
             );
-
         }
-
 
         function createParticle() {
 
@@ -2394,13 +2261,10 @@ $ %& $
             ) {
 
                 return;
-
             }
-
 
             const white =
                 Math.random() > 0.5;
-
 
             const p = {
 
@@ -2444,24 +2308,18 @@ $ %& $
                     white,
 
                 tick: 0
-
             };
-
 
             p.maxLife =
                 p.life;
 
-
             particles.push(p);
-
         }
-
 
         function drawPixel(particle) {
 
             const p =
                 particle;
-
 
             const alpha =
                 Math.max(
@@ -2470,13 +2328,10 @@ $ %& $
                     p.maxLife
                 );
 
-
             ctx.save();
-
 
             ctx.globalAlpha =
                 alpha;
-
 
             if (p.white) {
 
@@ -2493,13 +2348,10 @@ $ %& $
 
                 ctx.strokeStyle =
                     "#fff";
-
             }
-
 
             ctx.lineWidth =
                 1;
-
 
             const x =
                 Math.round(
@@ -2508,7 +2360,6 @@ $ %& $
                 ) *
                 SETTINGS.pixelStep;
 
-
             const y =
                 Math.round(
                     p.y /
@@ -2516,10 +2367,8 @@ $ %& $
                 ) *
                 SETTINGS.pixelStep;
 
-
             const size =
                 p.size;
-
 
             if (size <= 4) {
 
@@ -2545,14 +2394,10 @@ $ %& $
                     size - 1,
                     size - 1
                 );
-
             }
 
-
             ctx.restore();
-
         }
-
 
         function drawSpark(
             x,
@@ -2562,33 +2407,27 @@ $ %& $
 
             ctx.save();
 
-
             ctx.globalAlpha =
                 random(
                     0.35,
                     0.9
                 );
 
-
             ctx.fillStyle =
                 white
                     ? "#fff"
                     : "#000";
-
 
             ctx.strokeStyle =
                 white
                     ? "#000"
                     : "#fff";
 
-
             ctx.lineWidth =
                 1;
 
-
             const size =
                 3;
-
 
             ctx.fillRect(
                 Math.round(x),
@@ -2597,7 +2436,6 @@ $ %& $
                 size * 2 + 1
             );
 
-
             ctx.fillRect(
                 Math.round(x - size),
                 Math.round(y),
@@ -2605,15 +2443,11 @@ $ %& $
                 1
             );
 
-
             ctx.restore();
-
         }
-
 
         let spawnCounter =
             0;
-
 
         function spawnParticles() {
 
@@ -2625,19 +2459,16 @@ $ %& $
                 mouseY -
                 lastY;
 
-
             const distance =
                 Math.sqrt(
                     dx * dx +
                     dy * dy
                 );
 
-
             if (distance > 0.5) {
 
                 spawnCounter +=
                     SETTINGS.spawnRate;
-
 
                 while (
                     spawnCounter >= 1
@@ -2646,20 +2477,15 @@ $ %& $
                     createParticle();
 
                     spawnCounter--;
-
                 }
-
             }
-
 
             lastX =
                 mouseX;
 
             lastY =
                 mouseY;
-
         }
-
 
         function updateParticle(
             particle,
@@ -2669,19 +2495,15 @@ $ %& $
             particle.life -=
                 delta;
 
-
             if (
                 particle.life <= 0
             ) {
 
                 return false;
-
             }
-
 
             particle.tick +=
                 delta;
-
 
             if (
                 particle.tick >=
@@ -2691,29 +2513,21 @@ $ %& $
                 particle.tick =
                     0;
 
-
                 particle.x +=
                     particle.vx;
-
 
                 particle.y +=
                     particle.vy;
 
-
                 particle.vy +=
                     SETTINGS.gravity;
-
             }
 
-
             return true;
-
         }
-
 
         let previousTime =
             performance.now();
-
 
         function animate(
             currentTime
@@ -2726,10 +2540,8 @@ $ %& $
                     40
                 );
 
-
             previousTime =
                 currentTime;
-
 
             ctx.clearRect(
                 0,
@@ -2738,9 +2550,7 @@ $ %& $
                 window.innerHeight
             );
 
-
             spawnParticles();
-
 
             for (
                 let i =
@@ -2751,7 +2561,6 @@ $ %& $
 
                 const particle =
                     particles[i];
-
 
                 if (
                     !updateParticle(
@@ -2766,16 +2575,12 @@ $ %& $
                     );
 
                     continue;
-
                 }
-
 
                 drawPixel(
                     particle
                 );
-
             }
-
 
             if (
                 Math.random() < 0.035 &&
@@ -2787,20 +2592,18 @@ $ %& $
                 drawSpark(
                     mouseX +
                         random(-6, 6),
+
                     mouseY +
                         random(-6, 6),
+
                     Math.random() > 0.5
                 );
-
             }
-
 
             requestAnimationFrame(
                 animate
             );
-
         }
-
 
         requestAnimationFrame(
             animate
@@ -2820,45 +2623,37 @@ $ %& $
                 "music"
             );
 
-
         const playButton =
             document.getElementById(
                 "play-button"
             );
-
 
         const muteButton =
             document.getElementById(
                 "mute-button"
             );
 
-
         const progress =
             document.getElementById(
                 "music-progress"
             );
-
 
         const progressFill =
             document.getElementById(
                 "music-progress-fill"
             );
 
-
         const currentTime =
             document.getElementById(
                 "current-time"
             );
-
 
         const duration =
             document.getElementById(
                 "duration"
             );
 
-
         if (!audio) return;
-
 
         function formatTime(
             seconds
@@ -2871,15 +2666,12 @@ $ %& $
             ) {
 
                 return "0:00";
-
             }
-
 
             const minutes =
                 Math.floor(
                     seconds / 60
                 );
-
 
             const secondsPart =
                 Math.floor(
@@ -2891,15 +2683,12 @@ $ %& $
                     "0"
                 );
 
-
             return (
                 minutes +
                 ":" +
                 secondsPart
             );
-
         }
-
 
         audio.addEventListener(
             "loadedmetadata",
@@ -2911,12 +2700,9 @@ $ %& $
                         formatTime(
                             audio.duration
                         );
-
                 }
-
             }
         );
-
 
         if (playButton) {
 
@@ -2935,7 +2721,6 @@ $ %& $
 
                                     playButton.textContent =
                                         "❚❚";
-
                                 }
                             )
                             .catch(
@@ -2945,7 +2730,6 @@ $ %& $
                                         "Could not play MP3:",
                                         error
                                     );
-
                                 }
                             );
 
@@ -2955,14 +2739,10 @@ $ %& $
 
                         playButton.textContent =
                             "▶";
-
                     }
-
                 }
             );
-
         }
-
 
         audio.addEventListener(
             "timeupdate",
@@ -2973,9 +2753,7 @@ $ %& $
                 ) {
 
                     return;
-
                 }
-
 
                 const percent =
                     (
@@ -2984,16 +2762,13 @@ $ %& $
                     ) *
                     100;
 
-
                 if (
                     progressFill
                 ) {
 
                     progressFill.style.width =
                         percent + "%";
-
                 }
-
 
                 if (
                     currentTime
@@ -3003,12 +2778,9 @@ $ %& $
                         formatTime(
                             audio.currentTime
                         );
-
                 }
-
             }
         );
-
 
         if (progress) {
 
@@ -3021,18 +2793,14 @@ $ %& $
                     ) {
 
                         return;
-
                     }
-
 
                     const rect =
                         progress.getBoundingClientRect();
 
-
                     const position =
                         event.clientX -
                         rect.left;
-
 
                     const percentage =
                         Math.max(
@@ -3044,16 +2812,12 @@ $ %& $
                             )
                         );
 
-
                     audio.currentTime =
                         percentage *
                         audio.duration;
-
                 }
             );
-
         }
-
 
         if (muteButton) {
 
@@ -3064,17 +2828,13 @@ $ %& $
                     audio.muted =
                         !audio.muted;
 
-
                     muteButton.textContent =
                         audio.muted
                             ? "🔇"
                             : "🔊";
-
                 }
             );
-
         }
-
 
         audio.addEventListener(
             "ended",
@@ -3084,9 +2844,7 @@ $ %& $
 
                     playButton.textContent =
                         "▶";
-
                 }
-
 
                 if (
                     progressFill
@@ -3094,9 +2852,7 @@ $ %& $
 
                     progressFill.style.width =
                         "0%";
-
                 }
-
 
                 if (
                     currentTime
@@ -3104,9 +2860,7 @@ $ %& $
 
                     currentTime.textContent =
                         "0:00";
-
                 }
-
             }
         );
 
